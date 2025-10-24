@@ -6,11 +6,19 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <h1 className="font-heading font-bold text-4xl mb-4 text-foreground">Get in Touch</h1>
           <p className="text-muted-foreground">Our team is ready to assist with your requirements.</p>
+=======
+    <div className="min-h-screen pt-20 pb-36">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="text-center mb-12">
+          <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-4 text-foreground">Get in Touch</h1>
+          <p className="text-muted-foreground text-lg md:text-xl">Our team is ready to assist with your requirements.</p>
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">

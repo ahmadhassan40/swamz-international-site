@@ -24,21 +24,36 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative pt-20 pb-32 overflow-hidden gradient-hero">
+=======
+      <section className="relative pt-20 pb-36 overflow-hidden gradient-hero">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             className="max-w-4xl mx-auto text-center"
+=======
+            className="relative z-10 max-w-4xl mx-auto text-center"
+>>>>>>> 0394b2b (Align hero layout and section spacing)
           >
             <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">
               Trusted by Global Industries
             </Badge>
+<<<<<<< HEAD
             <h1 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-foreground">
               Precision You Can Wear.
               <br />
               <span className="gradient-brand bg-clip-text text-transparent">
+=======
+            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 text-foreground">
+              Precision You Can Wear.
+              <br />
+              <span className="text-primary drop-shadow-[0_6px_18px_rgba(30,64,175,0.4)]">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
                 Power You Can Trust.
               </span>
             </h1>
@@ -58,6 +73,7 @@ const Home = () => {
               </Link>
             </div>
           </motion.div>
+<<<<<<< HEAD
         </div>
 
         {/* Decorative Elements */}
@@ -67,6 +83,45 @@ const Home = () => {
 
       {/* Two Niche Features */}
       <section className="py-20 -mt-20">
+=======
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="relative z-10 mt-12"
+          >
+            <div className="mx-auto max-w-5xl rounded-3xl border border-border/60 bg-card/70 backdrop-blur-xl shadow-2xl">
+              <div className="grid gap-6 px-8 py-10 md:grid-cols-3">
+                {[
+                  {
+                    title: "Global fulfilment",
+                    description: "Stocked regional warehouses across the Middle East, Asia Pacific, and Europe.",
+                  },
+                  {
+                    title: "ISO-certified manufacturing",
+                    description: "Traceable production with ISO 9001, ISO 14001, and EN-compliant processes.",
+                  },
+                  {
+                    title: "24/7 technical support",
+                    description: "Application engineers on call for commissioning, audits, and troubleshooting.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="rounded-2xl border border-border/60 bg-background/40 p-5 text-left">
+                    <p className="text-sm uppercase tracking-wider text-primary">{item.title}</p>
+                    <p className="mt-3 text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Decorative Elements */}
+      </section>
+
+      {/* Two Niche Features */}
+      <section className="py-24">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <motion.div
@@ -125,7 +180,11 @@ const Home = () => {
       </section>
 
       {/* Why SWAMZ International */}
+<<<<<<< HEAD
       <section className="py-20 bg-muted/30">
+=======
+      <section className="py-24 bg-muted/30">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -194,7 +253,11 @@ const Home = () => {
       </section>
 
       {/* Featured Products */}
+<<<<<<< HEAD
       <section className="py-20">
+=======
+      <section className="py-24">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -228,7 +291,11 @@ const Home = () => {
       </section>
 
       {/* Stats */}
+<<<<<<< HEAD
       <section className="py-20 bg-navy text-white">
+=======
+      <section className="py-24 bg-navy text-white">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <StatCard icon={Users} value="5,000+" label="Global Clients" delay={0} />
@@ -240,7 +307,11 @@ const Home = () => {
       </section>
 
       {/* Certifications Strip */}
+<<<<<<< HEAD
       <section className="py-12 bg-muted/30">
+=======
+      <section className="py-24 bg-muted/30">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
             {["ISO 9001", "CE", "EN388", "ANSI", "FDA 510(k)", "IATF 16949"].map((cert, idx) => (
@@ -260,7 +331,11 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
+<<<<<<< HEAD
       <section className="py-20">
+=======
+      <section className="py-24">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -300,7 +375,11 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-brand-blue to-teal text-white">
+=======
+      <section className="py-24 bg-gradient-to-r from-brand-blue to-teal text-white">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

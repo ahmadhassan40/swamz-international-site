@@ -82,12 +82,17 @@ const Textiles = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
+<<<<<<< HEAD
       <section className="relative py-20 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
+=======
+      <section className="relative pt-20 pb-36 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
             className="max-w-3xl"
           >
             <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
@@ -101,6 +106,21 @@ const Textiles = () => {
               From cut resistance to chemical protection, we have the right solution for your workforce.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+=======
+            className="max-w-4xl mx-auto text-center"
+          >
+            <Badge className="mb-4 mx-auto bg-primary/10 text-primary border-primary/20">
+              Industrial Protective Textiles
+            </Badge>
+            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 text-foreground">
+              Precision Protection for Every Application
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+              Comprehensive range of industrial protective gloves engineered to meet the highest safety standards. 
+              From cut resistance to chemical protection, we have the right solution for your workforce.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
               <Link to="/products?niche=textiles">
                 <Button variant="hero" size="lg">
                   Browse Glove Catalog
@@ -117,7 +137,11 @@ const Textiles = () => {
       </section>
 
       {/* Product Categories Grid */}
+<<<<<<< HEAD
       <section className="py-20">
+=======
+      <section className="py-24">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -171,7 +195,11 @@ const Textiles = () => {
       </section>
 
       {/* Safety Standards */}
+<<<<<<< HEAD
       <section className="py-20 bg-muted/30">
+=======
+      <section className="py-24 bg-muted/30">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -214,7 +242,11 @@ const Textiles = () => {
       </section>
 
       {/* Sizing Guide Callout */}
+<<<<<<< HEAD
       <section className="py-20">
+=======
+      <section className="py-24">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -251,7 +283,11 @@ const Textiles = () => {
       </section>
 
       {/* CTA */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-brand-blue to-teal text-white">
+=======
+      <section className="py-24 bg-gradient-to-r from-brand-blue to-teal text-white">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

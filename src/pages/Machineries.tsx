@@ -79,12 +79,17 @@ const Machineries = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
+<<<<<<< HEAD
       <section className="relative py-20 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
+=======
+      <section className="relative pt-20 pb-36 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
             className="max-w-3xl"
           >
             <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
@@ -98,6 +103,21 @@ const Machineries = () => {
               Built for workshops, remanufacturing facilities, and OEM production lines.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
+=======
+            className="max-w-4xl mx-auto text-center"
+          >
+            <Badge className="mb-4 mx-auto bg-accent/10 text-accent border-accent/20">
+              Engine Machinery & Tooling
+            </Badge>
+            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 text-foreground">
+              Precision Equipment for Engine Excellence
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+              Complete range of professional-grade engine service equipment, from assembly tools to diagnostic systems. 
+              Built for workshops, remanufacturing facilities, and OEM production lines.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
               <Link to="/products?niche=machineries">
                 <Button variant="hero" size="lg">
                   Browse Equipment Catalog
@@ -114,7 +134,11 @@ const Machineries = () => {
       </section>
 
       {/* Equipment Categories */}
+<<<<<<< HEAD
       <section className="py-20">
+=======
+      <section className="py-24">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -174,7 +198,11 @@ const Machineries = () => {
       </section>
 
       {/* Capabilities */}
+<<<<<<< HEAD
       <section className="py-20 bg-muted/30">
+=======
+      <section className="py-24 bg-muted/30">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -219,7 +247,11 @@ const Machineries = () => {
       </section>
 
       {/* Service & Maintenance */}
+<<<<<<< HEAD
       <section className="py-20">
+=======
+      <section className="py-24">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -269,7 +301,11 @@ const Machineries = () => {
       </section>
 
       {/* CTA */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-brand-blue to-teal text-white">
+=======
+      <section className="py-24 bg-gradient-to-r from-brand-blue to-teal text-white">
+>>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
