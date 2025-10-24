@@ -1,0 +1,140 @@
+[
+  {
+    "id": "job-001",
+    "title": "Technical Sales Engineer - Textiles Division",
+    "department": "Sales",
+    "location": "Dubai, UAE",
+    "type": "Full-time",
+    "experience": "3-5 years",
+    "description": "Drive B2B sales of protective glove solutions across Middle East and Africa. Work with industrial clients to specify appropriate PPE for their applications.",
+    "responsibilities": [
+      "Develop and maintain relationships with key accounts in oil & gas, manufacturing, and construction sectors",
+      "Conduct technical presentations and product demonstrations",
+      "Collaborate with safety managers to assess hand protection needs",
+      "Prepare proposals, quotations, and tender responses",
+      "Achieve quarterly and annual sales targets"
+    ],
+    "requirements": [
+      "Bachelor's degree in Engineering, Industrial Safety, or related field",
+      "3+ years B2B technical sales experience, preferably in PPE or industrial products",
+      "Strong understanding of safety standards (ANSI, EN388, ISO)",
+      "Excellent communication skills in English; Arabic is a plus",
+      "Willingness to travel up to 50%"
+    ]
+  },
+  {
+    "id": "job-002",
+    "title": "Product Engineer - Engine Machinery",
+    "department": "Engineering",
+    "location": "Shanghai, China",
+    "type": "Full-time",
+    "experience": "5-8 years",
+    "description": "Lead development and improvement of precision engine tooling and test equipment. Collaborate with manufacturing and quality teams to ensure product excellence.",
+    "responsibilities": [
+      "Design and develop new engine service equipment and tooling",
+      "Conduct product testing, validation, and certification",
+      "Create technical documentation, user manuals, and training materials",
+      "Support customers with technical troubleshooting and applications engineering",
+      "Work with suppliers to optimize component quality and cost"
+    ],
+    "requirements": [
+      "Bachelor's or Master's degree in Mechanical Engineering or Automotive Engineering",
+      "5+ years experience in automotive tooling, engine development, or related field",
+      "Proficiency in CAD software (SolidWorks, CATIA) and FEA analysis",
+      "Knowledge of ISO 9001 and automotive quality standards (IATF 16949)",
+      "Strong problem-solving skills and attention to detail"
+    ]
+  },
+  {
+    "id": "job-003",
+    "title": "Quality Assurance Manager",
+    "department": "Quality",
+    "location": "Mumbai, India",
+    "type": "Full-time",
+    "experience": "8-12 years",
+    "description": "Oversee quality management systems across manufacturing facilities. Lead ISO certification efforts and continuous improvement initiatives.",
+    "responsibilities": [
+      "Manage quality assurance team and establish quality policies",
+      "Maintain ISO 9001 certification and pursue additional certifications (ISO 13485, AS9100)",
+      "Conduct internal audits, supplier audits, and corrective action follow-up",
+      "Analyze quality metrics and drive root cause analysis for nonconformances",
+      "Interface with customers on quality matters and audit preparation"
+    ],
+    "requirements": [
+      "Bachelor's degree in Engineering, Quality Management, or related field; advanced degree preferred",
+      "8+ years in quality management, with 3+ years in leadership role",
+      "ISO 9001 Lead Auditor certification required; Six Sigma Black Belt preferred",
+      "Experience in both textile and mechanical manufacturing industries is a plus",
+      "Strong knowledge of statistical process control and quality tools"
+    ]
+  },
+  {
+    "id": "job-004",
+    "title": "Regional Supply Chain Coordinator - Americas",
+    "department": "Logistics",
+    "location": "Houston, TX, USA",
+    "type": "Full-time",
+    "experience": "4-6 years",
+    "description": "Manage supply chain operations for North and South America. Optimize inventory, coordinate shipments, and ensure on-time delivery to customers.",
+    "responsibilities": [
+      "Oversee regional warehousing and distribution operations",
+      "Manage inventory levels to balance availability and carrying costs",
+      "Coordinate international shipments and customs clearance",
+      "Develop relationships with freight forwarders and logistics partners",
+      "Implement supply chain improvements and cost reduction initiatives"
+    ],
+    "requirements": [
+      "Bachelor's degree in Supply Chain Management, Logistics, or Business",
+      "4+ years experience in international supply chain or logistics",
+      "Familiarity with ERP systems (SAP, Oracle) and supply chain software",
+      "Knowledge of import/export regulations and Incoterms",
+      "Bilingual (English/Spanish) preferred"
+    ]
+  },
+  {
+    "id": "job-005",
+    "title": "Digital Marketing Specialist - B2B",
+    "department": "Marketing",
+    "location": "Singapore (Remote options available)",
+    "type": "Full-time",
+    "experience": "3-5 years",
+    "description": "Drive digital marketing strategy for B2B industrial markets. Manage website, content marketing, SEO/SEM, and lead generation campaigns.",
+    "responsibilities": [
+      "Develop and execute digital marketing campaigns across multiple channels",
+      "Manage company website, product pages, and technical content library",
+      "Optimize SEO and SEM for industrial keywords and buyer personas",
+      "Create case studies, white papers, and technical blog content",
+      "Analyze campaign performance and provide actionable insights"
+    ],
+    "requirements": [
+      "Bachelor's degree in Marketing, Communications, or related field",
+      "3+ years B2B digital marketing experience, preferably in industrial sector",
+      "Proficiency in Google Analytics, Google Ads, LinkedIn Campaign Manager",
+      "Strong content creation skills with technical writing ability",
+      "Experience with marketing automation platforms (HubSpot, Marketo)"
+    ]
+  },
+  {
+    "id": "job-006",
+    "title": "Health & Safety Compliance Specialist",
+    "department": "Compliance",
+    "location": "Frankfurt, Germany",
+    "type": "Full-time",
+    "experience": "4-7 years",
+    "description": "Ensure product compliance with global safety standards and regulations. Manage certification processes and maintain regulatory documentation.",
+    "responsibilities": [
+      "Monitor changes in PPE and machinery safety regulations (EU, US, Asia)",
+      "Manage product testing and certification with notified bodies",
+      "Prepare technical files and declarations of conformity",
+      "Support product development with regulatory guidance",
+      "Conduct compliance training for sales and engineering teams"
+    ],
+    "requirements": [
+      "Bachelor's degree in Occupational Health & Safety, Engineering, or related field",
+      "4+ years experience in regulatory compliance for PPE or machinery",
+      "Deep knowledge of EN standards (EN388, EN407, EN420) and EU Machinery Directive",
+      "Experience with CE marking, UKCA, and other conformity assessment schemes",
+      "Fluent in English and German; additional European languages a plus"
+    ]
+  }
+]

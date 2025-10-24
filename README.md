@@ -1,73 +1,107 @@
-# Welcome to your Lovable project
+# SWAMZ International - B2B Portfolio Website
 
-## Project info
+Premium company portfolio website for SWAMZ International, a B2B supplier of industrial protective gloves and precision engine machinery.
 
-**URL**: https://lovable.dev/projects/0ba009ac-3e52-49ad-aa61-ce03ac1bd864
+## 🚀 Quick Start
 
-## How can I edit this code?
+### Prerequisites
+- Node.js 18+ and npm
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/0ba009ac-3e52-49ad-aa61-ce03ac1bd864) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Installation & Development
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Access the site at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
+```bash
+npm run build
+npm run preview  # Preview production build
+```
 
-**Use GitHub Codespaces**
+## 📋 Features
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Dual Business Lines**: Textiles (protective gloves) and Machineries (engine equipment)
+- **20+ Products**: Complete catalog with filtering and search
+- **Case Studies**: Real-world success stories with metrics
+- **Responsive Design**: Mobile-first, fully responsive across all devices
+- **Dark Mode**: System preference detection with manual toggle
+- **Framer Motion**: Smooth scroll animations and micro-interactions
+- **SEO Optimized**: Meta tags, Open Graph, sitemap.xml, robots.txt
+- **Accessibility**: WCAG 2.1 AA compliant with semantic HTML
 
-## What technologies are used for this project?
+## 🎨 Tech Stack
 
-This project is built with:
+- **Framework**: React 18 + Vite + TypeScript
+- **Styling**: Tailwind CSS with custom design tokens
+- **UI Components**: shadcn/ui + Radix UI primitives
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Routing**: React Router v6
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📁 Project Structure
 
-## How can I deploy this project?
+```
+src/
+├── components/
+│   ├── ui/              # shadcn/ui components
+│   ├── Layout.tsx       # Header, footer, navigation
+│   ├── ProductCard.tsx
+│   ├── TestimonialCard.tsx
+│   └── StatCard.tsx
+├── data/
+│   ├── products.json    # Product catalog (20 items)
+│   ├── case-studies.json
+│   ├── jobs.json
+│   └── blog-posts.json
+├── pages/
+│   ├── Home.tsx
+│   ├── Textiles.tsx
+│   ├── Machineries.tsx
+│   ├── Products.tsx
+│   └── Contact.tsx
+└── index.css           # Design system tokens
+```
 
-Simply open [Lovable](https://lovable.dev/projects/0ba009ac-3e52-49ad-aa61-ce03ac1bd864) and click on Share -> Publish.
+## 🎨 Design System
 
-## Can I connect a custom domain to my Lovable project?
+All colors, fonts, and styles are defined in `src/index.css` and `tailwind.config.ts`:
 
-Yes, you can!
+- **Primary**: Brand Blue (#1D4ED8)
+- **Accent**: Teal (#14B8A6)
+- **Fonts**: Poppins (headings), Inter (body)
+- **Dark Mode**: Full support with semantic color tokens
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🔧 Customization
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Update Products
+Edit `src/data/products.json` to add/modify products.
+
+### Change Brand Colors
+Update HSL values in `src/index.css` under `:root` and `.dark` sections.
+
+### Add New Pages
+1. Create page component in `src/pages/`
+2. Add route in `src/App.tsx`
+3. Update navigation in `src/components/Layout.tsx`
+
+## 📧 Contact Form Integration
+
+The contact form (`src/pages/Contact.tsx`) currently uses client-side validation. To connect to an email service:
+
+1. Install email service SDK (SendGrid, Mailgun, etc.)
+2. Create API endpoint or serverless function
+3. Update form submission handler to POST to your endpoint
+
+## 🌐 Deployment
+
+This site is ready to deploy to:
+- **Vercel**: `vercel deploy`
+- **Netlify**: Connect Git repo or `netlify deploy`
+- **Any static host**: Upload contents of `dist/` folder
+
+## 📄 License
+
+Copyright © 2025 SWAMZ International. All rights reserved.

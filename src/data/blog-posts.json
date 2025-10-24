@@ -1,0 +1,46 @@
+[
+  {
+    "id": "blog-001",
+    "title": "Understanding ANSI Cut Resistance Levels: A Complete Guide",
+    "slug": "ansi-cut-resistance-levels-guide",
+    "date": "2025-01-15",
+    "author": "Dr. Sarah Chen, Technical Director",
+    "category": "Safety Standards",
+    "excerpt": "ANSI/ISEA 105 defines cut resistance levels from A1 to A9. Learn how to select the right protection level for your workplace hazards.",
+    "image": "/blog/ansi-cut-levels.jpg",
+    "content": "Full article content would go here..."
+  },
+  {
+    "id": "blog-002",
+    "title": "5 Critical Mistakes in Engine Torque Specifications",
+    "slug": "engine-torque-specification-mistakes",
+    "date": "2025-01-10",
+    "author": "James Rodriguez, Senior Applications Engineer",
+    "category": "Technical",
+    "excerpt": "Over-torquing, under-torquing, and incorrect sequences can lead to catastrophic engine failure. Here's how to get it right every time.",
+    "image": "/blog/torque-mistakes.jpg",
+    "content": "Full article content would go here..."
+  },
+  {
+    "id": "blog-003",
+    "title": "Heat-Resistant vs. Heat-Insulating Gloves: What's the Difference?",
+    "slug": "heat-resistant-vs-heat-insulating-gloves",
+    "date": "2025-01-05",
+    "author": "Maria Santos, Product Manager - Textiles",
+    "category": "Product Education",
+    "excerpt": "Choosing the wrong thermal protection can be dangerous. Understand the difference between contact heat and radiant heat protection.",
+    "image": "/blog/heat-protection.jpg",
+    "content": "Full article content would go here..."
+  },
+  {
+    "id": "blog-004",
+    "title": "ROI of Precision Engine Testing Equipment",
+    "slug": "roi-precision-engine-testing",
+    "date": "2024-12-28",
+    "author": "David Kim, Business Development Director",
+    "category": "Business",
+    "excerpt": "How investing in quality dynamometers and calibration equipment pays for itself through reduced warranty claims and faster development.",
+    "image": "/blog/engine-testing-roi.jpg",
+    "content": "Full article content would go here..."
+  }
+]

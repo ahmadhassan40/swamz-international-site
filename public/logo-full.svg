@@ -1,0 +1,20 @@
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="logo-full">
+    <!-- S with glove on left transitioning to gear on right -->
+    <path d="M25 15 C35 12, 40 15, 40 22 C40 26, 38 28, 35 29 L35 29 C38 30, 40 32, 40 37 C40 44, 35 47, 25 45 C20 44, 18 42, 18 38 L23 38 C23 40, 24 42, 27 42 C30 42, 32 41, 32 38 C32 35, 30 34, 27 34 L24 34 L24 31 L27 31 C30 31, 32 30, 32 27 C32 24, 30 23, 27 23 C24 23, 23 25, 23 27 L18 27 C18 23, 20 21, 25 19" fill="#1D4ED8"/>
+    
+    <!-- Glove outline elements on left side of S -->
+    <path d="M17 16 L17 20 M19 16 L19 22 M21 16 L21 24" stroke="#14B8A6" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    
+    <!-- Gear teeth on right side transitioning from S -->
+    <path d="M42 22 L44 23 L44 25 L42 26 M42 32 L44 33 L44 35 L42 36 M42 38 L44 39 L44 41 L42 42" stroke="#14B8A6" stroke-width="1.5" stroke-linejoin="round" opacity="0.6"/>
+    
+    <!-- Central piston element -->
+    <circle cx="39" cy="30" r="6" fill="none" stroke="#0F172A" stroke-width="2"/>
+    <circle cx="39" cy="30" r="3" fill="#1D4ED8"/>
+    
+    <!-- Company name -->
+    <text x="55" y="25" font-family="Poppins, sans-serif" font-size="18" font-weight="700" fill="currentColor">SWAMZ</text>
+    <text x="55" y="40" font-family="Poppins, sans-serif" font-size="12" font-weight="600" fill="currentColor" opacity="0.7">INTERNATIONAL</text>
+  </g>
+</svg>

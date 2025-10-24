@@ -1,0 +1,104 @@
+[
+  {
+    "id": "cs-001",
+    "title": "Automotive OEM Reduces Assembly Line Injuries by 78%",
+    "client": "Major European Automotive Manufacturer",
+    "industry": "Automotive",
+    "challenge": "High incidence of hand lacerations and repetitive strain injuries on engine assembly line. Previous glove solutions compromised dexterity, leading to slower production and worker frustration.",
+    "solution": "Deployed SWAMZ PrecisionFlex Cut-Resistant Assembly Gloves (ANSI A3) across 12 assembly stations. Conducted fit testing and worker training over 2-week pilot program.",
+    "results": {
+      "Injury Reduction": "78% fewer hand injuries in first 6 months",
+      "Productivity Gain": "12% faster assembly times due to improved grip and dexterity",
+      "Cost Savings": "€340,000 annual savings in injury-related costs",
+      "Worker Satisfaction": "94% of workers prefer SWAMZ gloves over previous supplier"
+    },
+    "image": "/case-studies/automotive-assembly.jpg",
+    "testimonial": "The PrecisionFlex gloves transformed our safety culture. Workers feel protected without sacrificing the touch they need for precision work.",
+    "testimonialAuthor": "Klaus Hoffmann, Safety Director"
+  },
+  {
+    "id": "cs-002",
+    "title": "Oil & Gas Facility Achieves Zero Chemical Exposure Incidents",
+    "client": "Middle East Petrochemical Complex",
+    "industry": "Oil & Gas",
+    "challenge": "Frequent chemical exposure incidents during equipment maintenance. Standard nitrile gloves degraded quickly under harsh chemical exposure, leading to breakthrough and skin contact.",
+    "solution": "Implemented SWAMZ ChemShield Nitrile Industrial Gloves with extended cuff protection for all maintenance operations. Established glove inspection protocols and replacement schedules.",
+    "results": {
+      "Safety Record": "24 consecutive months with zero chemical exposure incidents",
+      "Compliance": "100% PPE audit compliance, up from 67%",
+      "Glove Longevity": "3x longer usable life compared to previous product",
+      "Cost Efficiency": "23% reduction in PPE procurement costs"
+    },
+    "image": "/case-studies/oil-gas-maintenance.jpg",
+    "testimonial": "ChemShield gloves provide the chemical resistance we need without compromising flexibility. Our maintenance team trusts them completely.",
+    "testimonialAuthor": "Ahmed Al-Farsi, HSE Manager"
+  },
+  {
+    "id": "cs-003",
+    "title": "Engine Remanufacturing Plant Cuts Calibration Time by 40%",
+    "client": "North American Heavy Equipment Remanufacturer",
+    "industry": "Manufacturing",
+    "challenge": "Inconsistent torque application during engine reassembly led to warranty claims. Manual torque wrenches provided no data tracking for quality assurance.",
+    "solution": "Equipped all assembly stations with SWAMZ TorqueMaster Pro Digital Torque Wrench Systems. Integrated data logging with quality management system for full traceability.",
+    "results": {
+      "Calibration Time": "40% reduction in calibration and verification time",
+      "Warranty Claims": "Torque-related warranty claims dropped 89%",
+      "Quality Score": "ISO audit score improved from 82% to 97%",
+      "ROI": "System paid for itself in 7 months through reduced rework and claims"
+    },
+    "image": "/case-studies/engine-remanufacturing.jpg",
+    "testimonial": "The TorqueMaster system gave us the precision and documentation we needed to confidently stand behind our remanufactured engines.",
+    "testimonialAuthor": "Michael Patterson, Quality Assurance Lead"
+  },
+  {
+    "id": "cs-004",
+    "title": "Foundry Reduces Heat-Related Injuries by 91%",
+    "client": "Southeast Asian Steel Foundry",
+    "industry": "Heavy Industry",
+    "challenge": "Workers handling hot castings and performing high-temperature welding experienced frequent burn injuries. Existing heat-resistant gloves were bulky and limited productivity.",
+    "solution": "Introduced SWAMZ HeatGuard Extreme Heat-Resistant Gloves and WelderPro gloves for different operation zones. Conducted thermal hazard assessment and PPE matching.",
+    "results": {
+      "Injury Reduction": "91% fewer heat-related hand injuries",
+      "Sick Leave": "87% reduction in burn-related sick days",
+      "Productivity": "Workers able to handle parts 30 seconds earlier in cooling process",
+      "Cost Avoidance": "$280,000 in avoided medical and lost-time costs"
+    },
+    "image": "/case-studies/foundry-operations.jpg",
+    "testimonial": "HeatGuard gloves protect our workers from extreme temperatures while still allowing them to work efficiently. Game-changing PPE.",
+    "testimonialAuthor": "Priya Sharma, Operations Manager"
+  },
+  {
+    "id": "cs-005",
+    "title": "Racing Team Achieves Championship with Performance Engine Testing",
+    "client": "Formula Racing Team (Europe)",
+    "industry": "Motorsport",
+    "challenge": "Insufficient engine performance data during development led to unreliable race setups. Previous dyno equipment lacked precision for marginal gains needed at championship level.",
+    "solution": "Deployed SWAMZ EngineScan 5000 Diagnostic Engine Dyno for R&D facility. Integrated with telemetry systems for correlation between bench testing and track performance.",
+    "results": {
+      "Performance Gain": "3.2% average power increase through optimized tuning",
+      "Reliability": "Zero engine-related DNFs in championship season",
+      "Development Speed": "50% faster iteration cycles on engine calibration",
+      "Championship": "Team secured constructor's championship with 4 races remaining"
+    },
+    "image": "/case-studies/racing-dyno.jpg",
+    "testimonial": "The EngineScan 5000's precision gave us the confidence to push boundaries. Every decimal point of accuracy matters at this level.",
+    "testimonialAuthor": "Jean-Claude Dubois, Chief Engineer"
+  },
+  {
+    "id": "cs-006",
+    "title": "Medical Device Manufacturer Achieves Cleanroom Compliance",
+    "client": "Medical Device Production Facility (USA)",
+    "industry": "Medical Manufacturing",
+    "challenge": "Contamination failures in cleanroom assembly of implantable devices. Previous disposable gloves had inconsistent quality and particulate shedding issues.",
+    "solution": "Switched to SWAMZ MedTech Nitrile Disposable Gloves (FDA 510(k), AQL 1.0) for all ISO Class 5 cleanroom operations. Implemented stringent lot acceptance testing.",
+    "results": {
+      "Contamination Events": "96% reduction in particulate-related contamination",
+      "Production Yield": "Increased from 94.2% to 99.1%",
+      "FDA Inspections": "Zero observations related to glove quality in 3 consecutive audits",
+      "Cost Impact": "$1.2M annual savings from reduced scrap and rework"
+    },
+    "image": "/case-studies/medical-cleanroom.jpg",
+    "testimonial": "MedTech gloves deliver the consistent, low-particulate performance we need for critical implantable device assembly.",
+    "testimonialAuthor": "Dr. Sarah Williams, Quality Director"
+  }
+]

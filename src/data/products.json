@@ -1,0 +1,382 @@
+[
+  {
+    "id": "glv-001",
+    "sku": "SWMZ-GLV-CR-001",
+    "name": "MaxCut Pro Cut-Resistant Gloves",
+    "niche": "textiles",
+    "category": "Cut-Resistant",
+    "shortDescription": "ANSI A4 cut-resistant gloves with excellent grip and dexterity for precision handling.",
+    "specs": {
+      "Material": "HPPE fiber blend with nitrile coating",
+      "Cut Level": "ANSI A4 / EN388 Level D",
+      "Size Range": "S, M, L, XL, XXL",
+      "Color": "Gray with black coating",
+      "Grip Type": "Textured nitrile palm"
+    },
+    "standards": ["ANSI/ISEA 105", "EN388:2016 4X42D", "CE Certified"],
+    "images": ["/products/gloves-cut-resistant.jpg"],
+    "downloads": ["/downloads/maxcut-pro-datasheet.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "glv-002",
+    "sku": "SWMZ-GLV-NIT-002",
+    "name": "ChemShield Nitrile Industrial Gloves",
+    "niche": "textiles",
+    "category": "Nitrile",
+    "shortDescription": "Chemical-resistant nitrile gloves for handling oils, solvents, and harsh chemicals.",
+    "specs": {
+      "Material": "100% nitrile rubber",
+      "Thickness": "15 mil",
+      "Length": "12 inches (extended cuff)",
+      "Chemical Resistance": "Excellent for oils, acids, alkalis",
+      "Temperature Range": "-20°C to 120°C"
+    },
+    "standards": ["EN374-1", "EN374-3", "AQL 1.5"],
+    "images": ["/products/gloves-nitrile.jpg"],
+    "downloads": ["/downloads/chemshield-datasheet.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "glv-003",
+    "sku": "SWMZ-GLV-LTR-003",
+    "name": "ProGrip Leather Work Gloves",
+    "niche": "textiles",
+    "category": "Leather",
+    "shortDescription": "Premium grain leather gloves with reinforced palm for heavy-duty industrial work.",
+    "specs": {
+      "Material": "Full-grain cowhide leather",
+      "Lining": "Cotton fleece",
+      "Reinforcement": "Double palm and thumb",
+      "Cuff Style": "Safety cuff with elastic wrist",
+      "Application": "Heavy machinery, construction, welding prep"
+    },
+    "standards": ["EN420", "EN388:2016 3142X"],
+    "images": ["/products/gloves-leather.jpg"],
+    "downloads": ["/downloads/progrip-leather-spec.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "glv-004",
+    "sku": "SWMZ-GLV-HT-004",
+    "name": "HeatGuard Extreme Heat-Resistant Gloves",
+    "niche": "textiles",
+    "category": "Heat-Resistant",
+    "shortDescription": "High-temperature gloves for foundries, welding, and extreme heat applications.",
+    "specs": {
+      "Material": "Kevlar and aluminized aramid fiber",
+      "Heat Resistance": "Up to 500°C contact, 1000°C radiant",
+      "Length": "14 inches",
+      "Insulation": "Triple-layer heat barrier",
+      "Flexibility": "Excellent dexterity despite thickness"
+    },
+    "standards": ["EN407", "EN388:2016", "NFPA 1971"],
+    "images": ["/products/gloves-heat-resistant.jpg"],
+    "downloads": ["/downloads/heatguard-datasheet.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "glv-005",
+    "sku": "SWMZ-GLV-DSP-005",
+    "name": "MedTech Nitrile Disposable Gloves",
+    "niche": "textiles",
+    "category": "Disposable",
+    "shortDescription": "Powder-free disposable nitrile gloves for medical, lab, and cleanroom applications.",
+    "specs": {
+      "Material": "Medical-grade nitrile",
+      "Thickness": "4 mil",
+      "Powder": "Powder-free",
+      "Texture": "Textured fingertips",
+      "Quantity": "100 per box"
+    },
+    "standards": ["FDA 510(k)", "EN455", "ASTM D6319", "AQL 1.0"],
+    "images": ["/products/gloves-disposable.jpg"],
+    "downloads": ["/downloads/medtech-nitrile-spec.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "glv-006",
+    "sku": "SWMZ-GLV-SPC-006",
+    "name": "ArcShield Electrical Safety Gloves",
+    "niche": "textiles",
+    "category": "Specialty",
+    "shortDescription": "Class 2 electrical insulating gloves for protection up to 17,000V AC.",
+    "specs": {
+      "Material": "Natural rubber dielectric",
+      "Voltage Class": "Class 2 (17,000V AC)",
+      "Length": "14 inches",
+      "Liner Requirement": "Leather protector required (sold separately)",
+      "Testing": "Factory tested, re-test every 6 months"
+    },
+    "standards": ["ASTM D120", "IEC 60903", "NFPA 70E"],
+    "images": ["/products/gloves-electrical.jpg"],
+    "downloads": ["/downloads/arcshield-spec.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "glv-007",
+    "sku": "SWMZ-GLV-CR-007",
+    "name": "PrecisionFlex Cut-Resistant Assembly Gloves",
+    "niche": "textiles",
+    "category": "Cut-Resistant",
+    "shortDescription": "Lightweight ANSI A3 gloves for assembly work requiring high dexterity.",
+    "specs": {
+      "Material": "HPPE knit with PU coating",
+      "Cut Level": "ANSI A3 / EN388 Level C",
+      "Coating": "Polyurethane palm dip",
+      "Gauge": "18-gauge (ultra-thin)",
+      "Applications": "Electronics assembly, automotive parts handling"
+    },
+    "standards": ["ANSI/ISEA 105", "EN388:2016 4X42C"],
+    "images": ["/products/gloves-assembly.jpg"],
+    "downloads": ["/downloads/precisionflex-datasheet.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "glv-008",
+    "sku": "SWMZ-GLV-LTR-008",
+    "name": "WelderPro Heat & Cut Resistant Welding Gloves",
+    "niche": "textiles",
+    "category": "Leather",
+    "shortDescription": "Split leather welding gloves with Kevlar stitching for MIG/TIG welding.",
+    "specs": {
+      "Material": "Select shoulder split leather",
+      "Lining": "Flame-resistant cotton",
+      "Stitching": "Kevlar thread",
+      "Cuff": "Gauntlet style (5-inch cuff)",
+      "Protection": "Heat, sparks, and abrasion"
+    },
+    "standards": ["EN407", "EN388:2016", "EN12477 Type A"],
+    "images": ["/products/gloves-welding.jpg"],
+    "downloads": ["/downloads/welderpro-spec.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "glv-009",
+    "sku": "SWMZ-GLV-NIT-009",
+    "name": "GripMax Foam Nitrile General Purpose Gloves",
+    "niche": "textiles",
+    "category": "Nitrile",
+    "shortDescription": "Breathable foam nitrile gloves for warehouse, logistics, and light assembly.",
+    "specs": {
+      "Material": "Nylon liner with foam nitrile coating",
+      "Coating": "Micro-foam nitrile palm",
+      "Breathability": "High airflow design",
+      "Grip": "Dry and light oil grip",
+      "Washable": "Yes, up to 5 washes"
+    },
+    "standards": ["EN388:2016 4121X"],
+    "images": ["/products/gloves-foam-nitrile.jpg"],
+    "downloads": ["/downloads/gripmax-datasheet.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "glv-010",
+    "sku": "SWMZ-GLV-HT-010",
+    "name": "CryoGuard Cryogenic Cold Protection Gloves",
+    "niche": "textiles",
+    "category": "Specialty",
+    "shortDescription": "Insulated gloves for handling liquid nitrogen and cryogenic materials.",
+    "specs": {
+      "Material": "Multi-layer insulated fabric",
+      "Temperature Rating": "-200°C to +200°C",
+      "Length": "15 inches (mid-forearm)",
+      "Waterproof": "Yes",
+      "Applications": "LNG, cryogenic labs, liquid nitrogen handling"
+    },
+    "standards": ["EN511", "EN374-4"],
+    "images": ["/products/gloves-cryogenic.jpg"],
+    "downloads": ["/downloads/cryoguard-spec.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "mch-001",
+    "sku": "SWMZ-MCH-ASM-001",
+    "name": "TorqueMaster Pro Digital Torque Wrench System",
+    "niche": "machineries",
+    "category": "Engine Assembly Tools",
+    "shortDescription": "Precision digital torque wrench with data logging for critical engine assembly.",
+    "specs": {
+      "Torque Range": "10-300 Nm",
+      "Accuracy": "±1.5%",
+      "Display": "LCD with backlight",
+      "Data Logging": "2000 readings with USB download",
+      "Units": "Nm, ft-lb, in-lb switchable"
+    },
+    "standards": ["ISO 6789", "ASME B107.300"],
+    "images": ["/products/machinery-torque-wrench.jpg"],
+    "downloads": ["/downloads/torquemaster-manual.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "mch-002",
+    "sku": "SWMZ-MCH-TST-002",
+    "name": "EngineScan 5000 Diagnostic Engine Dyno",
+    "niche": "machineries",
+    "category": "Test Benches/Dynamometers",
+    "shortDescription": "Advanced engine dynamometer for performance testing and calibration.",
+    "specs": {
+      "Power Capacity": "Up to 500 HP",
+      "RPM Range": "0-8,000 RPM",
+      "Torque Measurement": "±0.2% full scale",
+      "Control System": "PC-based with real-time monitoring",
+      "Data Outputs": "Power, torque, fuel consumption, emissions"
+    },
+    "standards": ["SAE J1349", "ISO 1585"],
+    "images": ["/products/machinery-dyno.jpg"],
+    "downloads": ["/downloads/enginescan-5000-brochure.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "mch-003",
+    "sku": "SWMZ-MCH-PRC-003",
+    "name": "PrecisionBore Cylinder Honing Machine",
+    "niche": "machineries",
+    "category": "Precision Tooling",
+    "shortDescription": "Automatic cylinder boring and honing machine for engine block reconditioning.",
+    "specs": {
+      "Bore Range": "40-200 mm",
+      "Honing Accuracy": "±0.01 mm",
+      "Surface Finish": "Ra 0.2-0.8 μm",
+      "Automation": "CNC-controlled with touch panel",
+      "Coolant System": "Integrated filtration and temperature control"
+    },
+    "standards": ["ISO 286-2", "DIN 69051"],
+    "images": ["/products/machinery-honing.jpg"],
+    "downloads": ["/downloads/precisionbore-spec.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "mch-004",
+    "sku": "SWMZ-MCH-DGN-004",
+    "name": "FlexiCal Multi-Gas Emissions Analyzer",
+    "niche": "machineries",
+    "category": "Diagnostics/Calibration",
+    "shortDescription": "Portable emissions analyzer for engine tuning and compliance testing.",
+    "specs": {
+      "Gases Measured": "CO, CO2, HC, NOx, O2, Lambda",
+      "Measurement Range": "CO: 0-10%, HC: 0-20,000 ppm",
+      "Accuracy": "±3% of reading",
+      "Display": "7-inch touchscreen",
+      "Connectivity": "Bluetooth, USB, wireless printing"
+    },
+    "standards": ["EPA Method 5", "ISO 3930", "OIML R99"],
+    "images": ["/products/machinery-emissions.jpg"],
+    "downloads": ["/downloads/flexical-datasheet.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "mch-005",
+    "sku": "SWMZ-MCH-ASM-005",
+    "name": "ValvePro Pneumatic Valve Seat Cutting Kit",
+    "niche": "machineries",
+    "category": "Engine Assembly Tools",
+    "shortDescription": "Complete valve seat machining kit for cylinder head reconditioning.",
+    "specs": {
+      "Pilot Range": "5-14 mm",
+      "Cutter Sizes": "28-60 mm (included)",
+      "Angles": "30°, 45°, 60° carbide cutters",
+      "Power": "Pneumatic (6-8 bar required)",
+      "Case": "Heavy-duty aluminum carrying case"
+    },
+    "standards": ["ISO 6983", "DIN 8093"],
+    "images": ["/products/machinery-valve-kit.jpg"],
+    "downloads": ["/downloads/valvepro-manual.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "mch-006",
+    "sku": "SWMZ-MCH-CNC-006",
+    "name": "CrankTech CNC Crankshaft Grinder",
+    "niche": "machineries",
+    "category": "Precision Tooling",
+    "shortDescription": "High-precision CNC crankshaft grinding machine for engine rebuilding.",
+    "specs": {
+      "Max Crankshaft Length": "1200 mm",
+      "Journal Diameter": "30-150 mm",
+      "Grinding Accuracy": "±0.005 mm",
+      "Control System": "Siemens CNC with touch panel",
+      "Wheel Head": "Automatic balancing"
+    },
+    "standards": ["ISO 230-1", "JIS B 6190"],
+    "images": ["/products/machinery-crankshaft.jpg"],
+    "downloads": ["/downloads/cranktech-brochure.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "mch-007",
+    "sku": "SWMZ-MCH-TST-007",
+    "name": "InjectorFlow Pro Fuel Injector Test Bench",
+    "niche": "machineries",
+    "category": "Test Benches/Dynamometers",
+    "shortDescription": "Multi-channel fuel injector cleaning and flow testing system.",
+    "specs": {
+      "Channels": "6 injectors simultaneous",
+      "Pressure Range": "0-10 bar adjustable",
+      "Pulse Width": "0.5-50 ms",
+      "Ultrasonic Cleaning": "40 kHz integrated tank",
+      "Display": "Individual flow meters per channel"
+    },
+    "standards": ["ISO 4010", "SAE J1832"],
+    "images": ["/products/machinery-injector-bench.jpg"],
+    "downloads": ["/downloads/injectorflow-spec.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "mch-008",
+    "sku": "SWMZ-MCH-DGN-008",
+    "name": "CompressionCheck Pro Cylinder Leak-Down Tester",
+    "niche": "machineries",
+    "category": "Diagnostics/Calibration",
+    "shortDescription": "Professional leak-down tester for cylinder compression diagnostics.",
+    "specs": {
+      "Pressure Input": "80-100 PSI (shop air)",
+      "Test Pressure": "Regulated to engine spec",
+      "Gauges": "Dual 3.5-inch calibrated gauges",
+      "Adapters": "Universal spark plug thread adapters included",
+      "Leak Rate Display": "Percentage with color-coded scale"
+    },
+    "standards": ["SAE J1094"],
+    "images": ["/products/machinery-leak-down.jpg"],
+    "downloads": ["/downloads/compressioncheck-manual.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "mch-009",
+    "sku": "SWMZ-MCH-ASM-009",
+    "name": "PistonPress Hydraulic Piston Ring Compressor",
+    "niche": "machineries",
+    "category": "Engine Assembly Tools",
+    "shortDescription": "Hydraulic piston installation tool for damage-free cylinder insertion.",
+    "specs": {
+      "Bore Range": "50-120 mm",
+      "Compression Force": "Up to 5 tons",
+      "Operation": "Hydraulic hand pump",
+      "Material": "Heat-treated steel",
+      "Includes": "10 adapter sleeves"
+    },
+    "standards": ["ISO 6621-3"],
+    "images": ["/products/machinery-piston-press.jpg"],
+    "downloads": ["/downloads/pistonpress-datasheet.pdf"],
+    "contactCTA": true
+  },
+  {
+    "id": "mch-010",
+    "sku": "SWMZ-MCH-CNC-010",
+    "name": "SurfacePro Block Deck Resurfacing Machine",
+    "niche": "machineries",
+    "category": "Precision Tooling",
+    "shortDescription": "CNC mill for engine block and cylinder head deck resurfacing.",
+    "specs": {
+      "Working Area": "600 x 400 mm",
+      "Flatness Tolerance": "0.01 mm over full length",
+      "Spindle Speed": "500-3000 RPM variable",
+      "Feed Rate": "0.05-2.0 mm/min",
+      "Control": "Digital readout with auto feed"
+    },
+    "standards": ["ISO 1101", "DIN 876"],
+    "images": ["/products/machinery-deck-mill.jpg"],
+    "downloads": ["/downloads/surfacepro-manual.pdf"],
+    "contactCTA": true
+  }
+]
