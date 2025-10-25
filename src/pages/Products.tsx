@@ -1,21 +1,10 @@
-<<<<<<< HEAD
-import { useState } from "react";
-=======
 import { useEffect, useState } from "react";
->>>>>>> 0394b2b (Align hero layout and section spacing)
+import { useSearchParams } from "react-router-dom";
 import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import products from "@/data/products.json";
-<<<<<<< HEAD
-
-const Products = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [nicheFilter, setNicheFilter] = useState<string>("all");
-
-=======
-import { useSearchParams } from "react-router-dom";
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -48,28 +37,25 @@ const Products = () => {
     setSearchParams(nextParams, { replace: true });
   };
 
->>>>>>> 0394b2b (Align hero layout and section spacing)
-  const filteredProducts = products.filter(product => {
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.shortDescription.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredProducts = products.filter((product) => {
+    const lowerSearch = searchTerm.toLowerCase();
+    const matchesSearch =
+      product.name.toLowerCase().includes(lowerSearch) ||
+      product.shortDescription.toLowerCase().includes(lowerSearch);
     const matchesNiche = nicheFilter === "all" || product.niche === nicheFilter;
     return matchesSearch && matchesNiche;
   });
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
-        <div className="mb-12">
-          <h1 className="font-heading font-bold text-4xl mb-4 text-foreground">Product Catalog</h1>
-          <p className="text-muted-foreground">Browse our complete range of industrial protection and machinery solutions.</p>
-=======
     <div className="min-h-screen pt-20 pb-36">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-4 text-foreground">Product Catalog</h1>
-          <p className="text-muted-foreground text-lg md:text-xl">Browse our complete range of industrial protection and machinery solutions.</p>
->>>>>>> 0394b2b (Align hero layout and section spacing)
+          <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-4 text-foreground">
+            Product Catalog
+          </h1>
+          <p className="text-muted-foreground text-lg md:text-xl">
+            Browse our complete range of industrial protection and machinery solutions.
+          </p>
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -78,32 +64,15 @@ const Products = () => {
             <Input
               placeholder="Search products..."
               value={searchTerm}
-<<<<<<< HEAD
-              onChange={(e) => setSearchTerm(e.target.value)}
-=======
-              onChange={(e) => {
-                const value = e.target.value;
+              onChange={(event) => {
+                const value = event.target.value;
                 setSearchTerm(value);
                 updateQueryParams(value, nicheFilter);
               }}
->>>>>>> 0394b2b (Align hero layout and section spacing)
               className="pl-10"
             />
           </div>
           <div className="flex gap-2">
-<<<<<<< HEAD
-            <Button variant={nicheFilter === "all" ? "default" : "outline"} onClick={() => setNicheFilter("all")}>All</Button>
-            <Button variant={nicheFilter === "textiles" ? "default" : "outline"} onClick={() => setNicheFilter("textiles")}>Textiles</Button>
-            <Button variant={nicheFilter === "machineries" ? "default" : "outline"} onClick={() => setNicheFilter("machineries")}>Machineries</Button>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-=======
             <Button
               variant={nicheFilter === "all" ? "default" : "outline"}
               onClick={() => {
@@ -162,7 +131,6 @@ const Products = () => {
             </Button>
           </div>
         )}
->>>>>>> 0394b2b (Align hero layout and section spacing)
       </div>
     </div>
   );

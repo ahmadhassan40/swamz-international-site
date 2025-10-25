@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Shield, 
-  HandMetal, 
-  Flame, 
-  Droplets, 
-  Snowflake, 
+import {
+  Shield,
+  HandMetal,
+  Flame,
+  Droplets,
+  Snowflake,
   Scissors,
   ArrowRight,
-  CheckCircle2
+  CheckCircle2,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -21,92 +21,73 @@ const Textiles = () => {
       name: "Cut-Resistant",
       description: "ANSI A1-A9 rated gloves with HPPE and Kevlar fibers for sharp object handling.",
       standards: ["ANSI/ISEA 105", "EN388 Level A-F"],
-      link: "/products?category=Cut-Resistant"
+      link: "/products?category=Cut-Resistant",
     },
     {
       icon: Droplets,
       name: "Nitrile Coated",
       description: "Chemical and oil-resistant nitrile gloves for wet and oily applications.",
       standards: ["EN374", "AQL 1.5"],
-      link: "/products?category=Nitrile"
+      link: "/products?category=Nitrile",
     },
     {
       icon: HandMetal,
       name: "Leather Work Gloves",
       description: "Premium grain leather for heavy-duty construction, welding, and industrial work.",
       standards: ["EN420", "EN388"],
-      link: "/products?category=Leather"
+      link: "/products?category=Leather",
     },
     {
       icon: Flame,
       name: "Heat-Resistant",
       description: "Extreme temperature protection up to 1000°C for foundries and welding applications.",
       standards: ["EN407", "NFPA 1971"],
-      link: "/products?category=Heat-Resistant"
+      link: "/products?category=Heat-Resistant",
     },
     {
       icon: Shield,
       name: "Disposable Nitrile",
       description: "Medical-grade powder-free gloves for cleanroom, lab, and healthcare environments.",
       standards: ["FDA 510(k)", "EN455", "ASTM D6319"],
-      link: "/products?category=Disposable"
+      link: "/products?category=Disposable",
     },
     {
       icon: Snowflake,
       name: "Specialty Protection",
       description: "Electrical insulating, cryogenic, and application-specific safety gloves.",
       standards: ["ASTM D120", "EN511", "IEC 60903"],
-      link: "/products?category=Specialty"
-    }
+      link: "/products?category=Specialty",
+    },
   ];
 
   const safetyStandards = [
     {
       name: "EN388:2016",
-      description: "European standard for mechanical risks (abrasion, cut, tear, puncture)"
+      description: "European standard for mechanical risks (abrasion, cut, tear, puncture)",
     },
     {
       name: "ANSI/ISEA 105",
-      description: "American standard for hand protection selection criteria"
+      description: "American standard for hand protection selection criteria",
     },
     {
       name: "EN374",
-      description: "Protection against chemicals and microorganisms"
+      description: "Protection against chemicals and microorganisms",
     },
     {
       name: "EN407",
-      description: "Thermal risks (heat and/or fire) protection"
-    }
+      description: "Thermal risks (heat and/or fire) protection",
+    },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero */}
-<<<<<<< HEAD
-      <section className="relative py-20 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
-=======
       <section className="relative pt-20 pb-36 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
->>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className="max-w-3xl"
-          >
-            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-              Industrial Protective Textiles
-            </Badge>
-            <h1 className="font-heading font-bold text-4xl md:text-5xl mb-6 text-foreground">
-              Precision Protection for Every Application
-            </h1>
-            <p className="text-lg text-muted-foreground mb-8">
-              Comprehensive range of industrial protective gloves engineered to meet the highest safety standards. 
-              From cut resistance to chemical protection, we have the right solution for your workforce.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-=======
             className="max-w-4xl mx-auto text-center"
           >
             <Badge className="mb-4 mx-auto bg-primary/10 text-primary border-primary/20">
@@ -116,11 +97,10 @@ const Textiles = () => {
               Precision Protection for Every Application
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Comprehensive range of industrial protective gloves engineered to meet the highest safety standards. 
+              Comprehensive range of industrial protective gloves engineered to meet the highest safety standards.
               From cut resistance to chemical protection, we have the right solution for your workforce.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> 0394b2b (Align hero layout and section spacing)
               <Link to="/products?niche=textiles">
                 <Button variant="hero" size="lg">
                   Browse Glove Catalog
@@ -128,20 +108,18 @@ const Textiles = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="outline" size="lg">Get Expert Advice</Button>
+                <Button variant="outline" size="lg">
+                  Get Expert Advice
+                </Button>
               </Link>
             </div>
           </motion.div>
         </div>
-        <div className="absolute top-20 right-0 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-0 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl" />
       </section>
 
       {/* Product Categories Grid */}
-<<<<<<< HEAD
-      <section className="py-20">
-=======
       <section className="py-24">
->>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -149,9 +127,7 @@ const Textiles = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-foreground">
-              Glove Categories
-            </h2>
+            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-foreground">Glove Categories</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Explore our complete range of protective gloves designed for specific hazards and applications.
             </p>
@@ -160,7 +136,7 @@ const Textiles = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {categories.map((category, idx) => (
               <motion.div
-                key={idx}
+                key={category.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -175,12 +151,10 @@ const Textiles = () => {
                       <h3 className="font-heading font-semibold text-xl mb-2 text-foreground group-hover:text-primary transition-colors">
                         {category.name}
                       </h3>
-                      <p className="text-sm text-muted-foreground mb-4">
-                        {category.description}
-                      </p>
+                      <p className="text-sm text-muted-foreground mb-4">{category.description}</p>
                       <div className="flex flex-wrap gap-2">
-                        {category.standards.map((standard, sidx) => (
-                          <Badge key={sidx} variant="outline" className="text-xs">
+                        {category.standards.map((standard) => (
+                          <Badge key={standard} variant="outline" className="text-xs">
                             {standard}
                           </Badge>
                         ))}
@@ -195,11 +169,7 @@ const Textiles = () => {
       </section>
 
       {/* Safety Standards */}
-<<<<<<< HEAD
-      <section className="py-20 bg-muted/30">
-=======
       <section className="py-24 bg-muted/30">
->>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -208,7 +178,7 @@ const Textiles = () => {
             className="text-center mb-12"
           >
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4 text-foreground">
-              Compliance & Safety Standards
+              Compliance &amp; Safety Standards
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               All SWAMZ protective gloves meet or exceed international safety standards for PPE.
@@ -218,7 +188,7 @@ const Textiles = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {safetyStandards.map((standard, idx) => (
               <motion.div
-                key={idx}
+                key={standard.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -227,12 +197,8 @@ const Textiles = () => {
                 <Card>
                   <CardContent className="p-6 text-center">
                     <CheckCircle2 className="h-10 w-10 text-primary mx-auto mb-4" />
-                    <h3 className="font-heading font-semibold text-lg mb-2 text-foreground">
-                      {standard.name}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {standard.description}
-                    </p>
+                    <h3 className="font-heading font-semibold text-lg mb-2 text-foreground">{standard.name}</h3>
+                    <p className="text-sm text-muted-foreground">{standard.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -242,11 +208,7 @@ const Textiles = () => {
       </section>
 
       {/* Sizing Guide Callout */}
-<<<<<<< HEAD
-      <section className="py-20">
-=======
       <section className="py-24">
->>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -283,11 +245,7 @@ const Textiles = () => {
       </section>
 
       {/* CTA */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-r from-brand-blue to-teal text-white">
-=======
       <section className="py-24 bg-gradient-to-r from-brand-blue to-teal text-white">
->>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

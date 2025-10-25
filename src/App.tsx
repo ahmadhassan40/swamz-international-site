@@ -10,8 +10,6 @@ import Machineries from "./pages/Machineries";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-<<<<<<< HEAD
-=======
 import CaseStudies from "./pages/CaseStudies";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
@@ -21,7 +19,6 @@ import Downloads from "./pages/Downloads";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import ProductDetail from "./pages/ProductDetail";
->>>>>>> 0394b2b (Align hero layout and section spacing)
 
 const queryClient = new QueryClient();
 
@@ -37,9 +34,6 @@ const App = () => (
             <Route path="/textiles" element={<Textiles />} />
             <Route path="/machineries" element={<Machineries />} />
             <Route path="/products" element={<Products />} />
-<<<<<<< HEAD
-            <Route path="/contact" element={<Contact />} />
-=======
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/case-studies" element={<CaseStudies />} />
@@ -50,7 +44,6 @@ const App = () => (
             <Route path="/downloads" element={<Downloads />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
->>>>>>> 0394b2b (Align hero layout and section spacing)
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

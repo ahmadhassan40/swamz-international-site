@@ -1,27 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Moon, Sun, Phone, Mail } from "lucide-react";
-=======
 import { Menu, X, Moon, Sun, Phone, Mail } from "lucide-react";
->>>>>>> 0394b2b (Align hero layout and section spacing)
 import { Button } from "@/components/ui/button";
 
-export const Layout = ({ children }: { children: React.ReactNode }) => {
+export const Layout = ({ children }: { children: ReactNode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-<<<<<<< HEAD
-  const [darkMode, setDarkMode] = useState(false);
-=======
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window === "undefined") return true;
     const storedTheme = window.localStorage.getItem("theme");
     if (storedTheme) {
       return storedTheme === "dark";
     }
-    return true;
+    const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
+    return prefersDark ?? true;
   });
->>>>>>> 0394b2b (Align hero layout and section spacing)
   const location = useLocation();
 
   useEffect(() => {
@@ -31,19 +24,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   useEffect(() => {
-<<<<<<< HEAD
-    const isDark = localStorage.getItem("theme") === "dark" || 
-                   (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
-    setDarkMode(isDark);
-    document.documentElement.classList.toggle("dark", isDark);
-  }, []);
-
-  const toggleDarkMode = () => {
-    const newMode = !darkMode;
-    setDarkMode(newMode);
-    localStorage.setItem("theme", newMode ? "dark" : "light");
-    document.documentElement.classList.toggle("dark", newMode);
-=======
     setMobileMenuOpen(false);
   }, [location.pathname]);
 
@@ -62,7 +42,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const toggleDarkMode = () => {
     setDarkMode((prev) => !prev);
->>>>>>> 0394b2b (Align hero layout and section spacing)
   };
 
   const navigation = [
@@ -114,9 +93,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {/* Right Actions */}
             <div className="flex items-center space-x-2">
-<<<<<<< HEAD
-              <Button variant="ghost" size="icon" onClick={toggleDarkMode} className="hidden sm:flex">
-=======
               <Button
                 variant="ghost"
                 size="icon"
@@ -125,7 +101,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
                 title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
               >
->>>>>>> 0394b2b (Align hero layout and section spacing)
                 {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
               <Link to="/contact" className="hidden md:block">
@@ -136,10 +111,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 size="icon"
                 className="lg:hidden"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-<<<<<<< HEAD
-=======
                 aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
->>>>>>> 0394b2b (Align hero layout and section spacing)
               >
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
@@ -177,11 +149,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <main className="flex-grow pt-16 md:pt-20">{children}</main>
 
       {/* Footer */}
-<<<<<<< HEAD
-      <footer className="bg-navy text-white mt-20">
-=======
       <footer className="bg-navy text-white mt-2">
->>>>>>> 0394b2b (Align hero layout and section spacing)
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}

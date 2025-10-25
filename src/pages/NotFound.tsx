@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-=======
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
->>>>>>> 0394b2b (Align hero layout and section spacing)
 
 const NotFound = () => {
   const location = useLocation();
@@ -16,15 +11,6 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-<<<<<<< HEAD
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-gray-600">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 underline hover:text-blue-700">
-          Return to Home
-        </a>
-=======
     <div className="flex min-h-[70vh] items-center justify-center bg-muted/30 px-4">
       <div className="max-w-md rounded-2xl border border-border bg-card p-10 text-center shadow-lg">
         <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -42,7 +28,6 @@ const NotFound = () => {
             </Button>
           </Link>
         </div>
->>>>>>> 0394b2b (Align hero layout and section spacing)
       </div>
     </div>
   );
