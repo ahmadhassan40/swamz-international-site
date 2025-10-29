@@ -1,20 +1,11 @@
 import { useState, useEffect, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Moon, Sun, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Layout = ({ children }: { children: ReactNode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window === "undefined") return true;
-    const storedTheme = window.localStorage.getItem("theme");
-    if (storedTheme) {
-      return storedTheme === "dark";
-    }
-    const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches;
-    return prefersDark ?? true;
-  });
   const location = useLocation();
 
   useEffect(() => {
@@ -29,20 +20,17 @@ export const Layout = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     if (typeof document !== "undefined") {
-      document.documentElement.classList.toggle("dark", darkMode);
+      document.documentElement.classList.remove("dark");
+      document.documentElement.style.colorScheme = "light";
     }
     if (typeof window !== "undefined") {
       try {
-        window.localStorage.setItem("theme", darkMode ? "dark" : "light");
+        window.localStorage.setItem("theme", "light");
       } catch (error) {
         console.warn("Unable to persist theme preference:", error);
       }
     }
-  }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode((prev) => !prev);
-  };
+  }, []);
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -67,10 +55,16 @@ export const Layout = ({ children }: { children: ReactNode }) => {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <img src="/logo-mark.svg" alt="SWAMZ" className="h-10 w-10" />
-              <div className="hidden sm:block">
-                <div className="font-heading font-bold text-lg text-foreground">SWAMZ</div>
-                <div className="text-xs text-muted-foreground font-semibold">INTERNATIONAL</div>
+              <span className="relative inline-flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-transparent bg-transparent">
+                <img
+                  src="/images/swamz_logo_new.png"
+                  alt="SWAMZ emblem"
+                  className="h-full w-full object-contain drop-shadow-[0_12px_25px_rgba(146,64,14,0.45)]"
+                />
+              </span>
+              <div className="hidden sm:flex flex-col leading-none">
+                <span className="font-heading text-xl font-semibold tracking-wide text-foreground">SWAMZ</span>
+                <span className="text-xs font-medium uppercase tracking-[0.26em] text-primary/80">International</span>
               </div>
             </Link>
 
@@ -93,16 +87,6 @@ export const Layout = ({ children }: { children: ReactNode }) => {
 
             {/* Right Actions */}
             <div className="flex items-center space-x-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleDarkMode}
-                className="hidden sm:flex"
-                aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-                title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-              >
-                {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              </Button>
               <Link to="/contact" className="hidden md:block">
                 <Button variant="default" size="sm">Request Quote</Button>
               </Link>
@@ -149,12 +133,24 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       <main className="flex-grow pt-16 md:pt-20">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-navy text-white mt-2">
+      <footer className="bg-navy text-white">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div>
-              <img src="/logo-full.svg" alt="SWAMZ International" className="h-12 mb-4 brightness-0 invert" />
+              <div className="mb-4 inline-flex items-center space-x-4">
+                <span className="relative inline-flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl border border-transparent bg-transparent">
+                  <img
+                    src="/images/swamz_logo_new.png"
+                    alt="SWAMZ emblem"
+                    className="h-full w-full object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,0.55)]"
+                  />
+                </span>
+                <div className="flex flex-col leading-none">
+                  <span className="font-heading text-2xl font-semibold tracking-wide text-white">SWAMZ</span>
+                  <span className="text-xs font-medium uppercase tracking-[0.26em] text-primary/80">International</span>
+                </div>
+              </div>
               <p className="text-sm text-gray-300 mb-4">
                 Leading B2B supplier of industrial protective gloves and precision engine machinery. 
                 Trusted globally for quality, compliance, and reliability.
@@ -211,7 +207,11 @@ export const Layout = ({ children }: { children: ReactNode }) => {
               </ul>
               <div className="mt-4">
                 <Link to="/contact">
-                  <Button variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="border-white/20 bg-white text-black hover:bg-white/90 hover:text-black"
+                  >
                     Get in Touch
                   </Button>
                 </Link>
