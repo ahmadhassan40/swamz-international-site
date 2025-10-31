@@ -1,6 +1,6 @@
-import { initializeApp, getApps, getApp } from "firebase/app";
+import { initializeApp, getApps, getApp, type FirebaseApp } from "firebase/app";
 import { getAnalytics, isSupported, type Analytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, type Firestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -12,27 +12,33 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 } as const;
 
-function getFirebaseApp() {
-  if (!firebaseConfig.apiKey) {
-    throw new Error("Missing Firebase configuration. Did you set your VITE_FIREBASE_* env vars?");
-  }
+const hasFirebaseConfig = Boolean(
+  firebaseConfig.apiKey &&
+    firebaseConfig.projectId &&
+    firebaseConfig.appId &&
+    firebaseConfig.authDomain &&
+    firebaseConfig.storageBucket,
+);
 
-  return getApps().length ? getApp() : initializeApp(firebaseConfig);
-}
-
-const app = getFirebaseApp();
-const db = getFirestore(app);
-
+let app: FirebaseApp | null = null;
+let db: Firestore | null = null;
 let analytics: Analytics | undefined;
 
-void isSupported()
-  .then((supported) => {
-    if (supported) {
-      analytics = getAnalytics(app);
-    }
-  })
-  .catch(() => {
-    analytics = undefined;
-  });
+if (hasFirebaseConfig) {
+  app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+  db = getFirestore(app);
 
-export { app, db, analytics };
+  void isSupported()
+    .then((supported) => {
+      if (supported) {
+        analytics = getAnalytics(app!);
+      }
+    })
+    .catch(() => {
+      analytics = undefined;
+    });
+} else {
+  console.warn("Firebase configuration missing. Data capture features are disabled.");
+}
+
+export { app, db, analytics, hasFirebaseConfig };

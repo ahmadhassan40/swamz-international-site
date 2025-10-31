@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { db, hasFirebaseConfig } from "@/lib/firebase";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -30,6 +30,15 @@ const Contact = () => {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (submitting) return;
+
+    if (!db) {
+      toast({
+        variant: "destructive",
+        title: "Submission unavailable",
+        description: "Online quote capture is temporarily disabled. Please email info@swamz-international.com.",
+      });
+      return;
+    }
 
     setSubmitting(true);
     try {
@@ -114,6 +123,15 @@ const Contact = () => {
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   Provide a few details and our specialists will contact you with tailored recommendations and pricing.
                 </p>
+                {!hasFirebaseConfig && (
+                  <p className="mt-4 rounded-xl border border-dashed border-primary/30 bg-primary/5 p-4 text-sm text-primary">
+                    Online submissions are temporarily disabled. Please email us directly at
+                    <a className="ml-1 underline" href="mailto:info@swamz-international.com">
+                      info@swamz-international.com
+                    </a>
+                    .
+                  </p>
+                )}
                 <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
                   <div className="grid gap-4 md:grid-cols-2">
                     <Input
@@ -172,7 +190,7 @@ const Contact = () => {
                     size="lg"
                     className="w-full border-primary/30 bg-white text-black hover:bg-primary/10 hover:text-black"
                     variant="outline"
-                    disabled={submitting}
+                    disabled={submitting || !db}
                   >
                     {submitting ? "Submitting..." : "Submit Request"}
                   </Button>
