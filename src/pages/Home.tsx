@@ -1,6 +1,6 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ProductCard } from "@/components/ProductCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { StatCard } from "@/components/StatCard";
 import { Badge } from "@/components/ui/badge";
@@ -16,10 +16,30 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import products from "@/data/products.json";
+import { catalogueProducts } from "@/data/catalogue";
 
 const Home = () => {
-  const featuredProducts = products.slice(0, 4);
+  const featuredProducts = useMemo(() => {
+    const uniqueByCategory: Array<
+      (typeof catalogueProducts)[number] & { primaryImage: string | null; highlights: string[] }
+    > = [];
+    const seenCategories = new Set<string>();
+
+    for (const product of catalogueProducts) {
+      const primaryImage = product.imageUrls.find((url) => Boolean(url)) ?? null;
+      if (!primaryImage) continue;
+      if (seenCategories.has(product.categorySlug)) continue;
+      seenCategories.add(product.categorySlug);
+      uniqueByCategory.push({
+        ...product,
+        primaryImage,
+        highlights: product.highlights.filter(Boolean).slice(0, 2),
+      });
+      if (uniqueByCategory.length >= 4) break;
+    }
+
+    return uniqueByCategory;
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -289,10 +309,90 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4 mb-12">
+            {featuredProducts.map((product, index) => {
+              const contactHref = `/contact?product=${encodeURIComponent(product.sku)}`;
+              return (
+                <motion.article
+                  key={product.sku}
+                  initial={{ opacity: 0, y: 22 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  className="group flex h-full flex-col rounded-3xl border border-primary/15 bg-white/95 p-6 shadow-[0_22px_55px_-40px_rgba(146,64,14,0.5)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_70px_-38px_rgba(146,64,14,0.55)]"
+                >
+                  <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-primary/10 bg-white p-4">
+                    {product.primaryImage ? (
+                      <img
+                        src={product.primaryImage}
+                        alt={product.name}
+                        loading="lazy"
+                        className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                        onError={(event) => {
+                          event.currentTarget.style.visibility = "hidden";
+                        }}
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center text-xs uppercase tracking-wide text-muted-foreground">
+                        Image coming soon
+                      </div>
+                    )}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/12 via-black/0 to-black/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  </div>
+
+                  <div className="mt-5 flex flex-1 flex-col gap-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="space-y-1">
+                        <Badge className="bg-primary/10 text-primary" variant="secondary">
+                          {product.categoryName}
+                        </Badge>
+                        <h3 className="font-heading text-xl font-semibold text-foreground group-hover:text-primary">
+                          {product.name}
+                        </h3>
+                      </div>
+                      <Badge variant="outline" className="border-primary/30 text-primary">
+                        {product.sku.replace(/^Art\s+/i, "")}
+                      </Badge>
+                    </div>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{product.summary}</p>
+                    {product.highlights.length > 0 && (
+                      <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground/90">
+                        {product.highlights.map((highlight) => (
+                          <li key={highlight} className="flex gap-2">
+                            <span aria-hidden className="mt-1 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+
+                  <div className="mt-auto flex w-full flex-col gap-3">
+                    <span className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground/70">
+                      {product.categoryName}
+                    </span>
+                    <div className="flex w-full flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-3">
+                      <Link to={`/products?category=${product.categorySlug}`} className="w-full sm:flex-1">
+                        <Button
+                          variant="ghost"
+                          className="w-full border border-transparent text-primary transition-colors hover:border-primary/25 hover:bg-primary/10 hover:text-primary"
+                        >
+                          View Range
+                        </Button>
+                      </Link>
+                      <Link to={contactHref} className="w-full sm:flex-1">
+                        <Button
+                          variant="outline"
+                          className="w-full border-primary/40 text-primary transition-colors hover:bg-primary/10 hover:text-primary"
+                        >
+                          Request Quote
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </motion.article>
+              );
+            })}
           </div>
 
           <div className="text-center">

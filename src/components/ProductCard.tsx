@@ -15,6 +15,7 @@ interface ProductCardProps {
     shortDescription: string;
     standards: string[];
     images: string[];
+    catalogueText?: string;
   };
 }
 
@@ -22,6 +23,9 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const fallbackImage =
     product.niche === "machineries" ? "/media/placeholder-machinery.svg" : "/media/placeholder-gloves.svg";
   const primaryImage = product.images?.[0] ?? fallbackImage;
+  const isCatalogueItem = product.id.startsWith("catalog-");
+  const ctaHref = isCatalogueItem ? `/contact?product=${encodeURIComponent(product.sku)}` : `/products/${product.id}`;
+  const ctaLabel = isCatalogueItem ? "Request Quote" : "View Details";
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -70,12 +74,12 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         </CardContent>
 
         <CardFooter className="relative z-10 p-4 pt-0">
-          <Link to={`/products/${product.id}`} className="w-full">
+          <Link to={ctaHref} className="w-full">
             <Button
               variant="outline"
               className="w-full border-primary/40 text-primary hover:bg-primary/10 hover:text-primary shadow-[0_18px_30px_-25px_rgba(146,64,14,0.45)] group/btn"
             >
-              View Details
+              {ctaLabel}
               <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
             </Button>
           </Link>

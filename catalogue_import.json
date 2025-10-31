@@ -1,0 +1,770 @@
+{
+  "generatedAt": "2025-10-31T00:00:00+05:00",
+  "currency": "USD",
+  "categories": [
+    {
+      "categoryName": "Drill Gloves",
+      "categorySlug": "drill-gloves",
+      "imagesZip": "Drill_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 701",
+          "name": "Art SI 701",
+          "slug": "art-si-701-art-si-701",
+          "description": "Drill Gloves with Knitted Wrist Wing Thumb Style Quality: 6-oz to 14-oz Cotton & Poly Cotton Rugged General-Purpose Gloves Ribbed Knit Wrist Applications: General Handling Ware House Size: Men's & Ladies CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_701.jpeg",
+            "Art_SI_701_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 702",
+          "name": "Art SI 702",
+          "slug": "art-si-702-art-si-702",
+          "description": "Drill Gloves with Knitted Wrist Straight Thumb Style Quality: 6-oz to 14-oz Cotton & Poly Cotton Rugged General-Purpose Gloves Ribbed Knit Wrist Applications: General Handling Ware House Size: Men's & Ladies CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_702.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 703",
+          "name": "Art SI 703",
+          "slug": "art-si-703-art-si-703",
+          "description": "Drill Gloves Straight Thumb Style with Blue K/W Quality: 6-oz to 14-oz Cotton & Poly Cotton Rugged General-Purpose Gloves Ribbed Knit Wrist Applications: General Handling Ware House Size: Men's & Ladies CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_703.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 704",
+          "name": "Art SI 704",
+          "slug": "art-si-704-art-si-704",
+          "description": "Drill Gloves with Cuff Wing Thumb & Straight Thumb Cuff: 6 cm to 15 cm Cotton & Poly Cotton Rugged General-Purpose Gloves Ribbed Knit Wrist Applications: General Handling Ware House Size: Men's & Ladies CE Minimal Risk",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Drill Dotted Gloves",
+      "categorySlug": "drill-dotted-gloves",
+      "imagesZip": "Drill_Dotted_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 805",
+          "name": "Art SI 805",
+          "slug": "art-si-805-art-si-805",
+          "description": "Drill Pvc Dotted Gloves With K/W Straight & Wing Thumb Quality: 6-oz to 14-oz Cotton & Poly Cotton Rugged General-Purpose Gloves Ribbed Knit Wrist Applications: General Handling Ware House Size: Men's & Ladies CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_805.jpeg",
+            "Art_SI_805_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 806",
+          "name": "Art SI 806",
+          "slug": "art-si-806-art-si-806",
+          "description": "Drill Dotted Gloves with Red Knitted Wrist Quality: 6-oz to 14-oz Cotton & Poly Cotton Rugged General-Purpose Gloves Ribbed Knit Wrist Applications: General Handling Ware House Size: Men's & Ladies CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_806.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 807",
+          "name": "Art SI 807",
+          "slug": "art-si-807-art-si-807",
+          "description": "Drill Canvas Fluorescent Gloves with PVC Dots Straight Thumb Orange K/W Florescent Orange PVC Dots on Palm, Index Finger & Thumb Clute Pattern Cotton & Poly Cotton Quality: 8-oz to 14-oz Rugged General-Purpose Gloves Matching Knit Wrist Applications: General Handling Ware House Size: Men's & Ladies CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_807.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 808",
+          "name": "Art SI 808",
+          "slug": "art-si-808-art-si-808",
+          "description": "Drill Green/Black PVC Dots Gloves with Green Knitted Wrist Quality: 8-oz to 14-oz Rugged General-Purpose Gloves Cotton & Poly Cotton Applications: General Handling Ware House Size: Men's & Ladies CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_808.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 1009",
+          "name": "Art SI 1009",
+          "slug": "art-si-1009-art-si-1009",
+          "description": "Drill Orange/Black PVC Dots Gloves with Orange Knitted Wrist Quality: 8-oz to 14-oz Rugged General-Purpose Gloves Cotton & Poly Cotton Applications: General Handling Ware House Size: Men's & Ladies CE Minimal Risk",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Chore Gloves",
+      "categorySlug": "chore-gloves",
+      "imagesZip": "Chore_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 101",
+          "name": "Art SI 101",
+          "slug": "art-si-101-art-si-101",
+          "description": "Yellow Chore Gloves Single Ply with Red Knitted Wrist Straight Thumb / Wing Thumb Quality: 8-oz to 16-oz",
+          "imageFiles": [
+            "Art_SI_101.jpeg",
+            "Art_SI_101_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 102",
+          "name": "Art SI 102",
+          "slug": "art-si-102-art-si-102",
+          "description": "Orange Chore Gloves Single Ply with Red Knitted Wrist Straight Thumb / Wing Thumb Quality: 8-oz to 16-oz",
+          "imageFiles": [
+            "Art_SI_102.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 103",
+          "name": "Art SI 103",
+          "slug": "art-si-103-art-si-103",
+          "description": "Green Chore Gloves Single Ply with Matching Knitted Wrist Straight Thumb / Wing Thumb Quality: 8-oz to 16-oz",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Cord Gloves",
+      "categorySlug": "cord-gloves",
+      "imagesZip": "Cord_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 916",
+          "name": "Art SI 916",
+          "slug": "art-si-916-art-si-916",
+          "description": "Green Corduroy Double Palm Gloves with Knitted Wrist Straight Thumb / Wing Thumb Hi. Vis Poly Cotton, & 100% Cotton",
+          "imageFiles": [
+            "Art_SI_916.jpeg",
+            "Art_SI_916_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 917",
+          "name": "Art SI 917",
+          "slug": "art-si-917-art-si-917",
+          "description": "Natural Corduroy Double Palm Gloves Red wrist, Poly Cotton, & 100% Cotton Straight Thumb / Wing Thumb",
+          "imageFiles": [
+            "Art_SI_917.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 918",
+          "name": "Art SI 918",
+          "slug": "art-si-918-art-si-918",
+          "description": "Lime Green Corduroy Double Palm Gloves with Knitted Wrist With Black Knitted Wrist Straight Thumb / Wing Thumb Hi. Vis Poly Cotton, & 100% Cotton",
+          "imageFiles": [
+            "Art_SI_918.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 919",
+          "name": "Art SI 919",
+          "slug": "art-si-919-art-si-919",
+          "description": "Florescent Orange Corduroy Gloves Double Palm With K/W Straight Thumb / Wing Thumb Hi. Vis Poly Cotton, & 100% Cotton",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Hotmail Gloves",
+      "categorySlug": "hotmail-gloves",
+      "imagesZip": "Hotmail_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 110",
+          "name": "Art SI 110",
+          "slug": "art-si-110-art-si-110",
+          "description": "Hotmail Gloves Double & Triple Palm Band Top & Gauntlet Cuff Quality: 16-oz to 34-oz Applications: Light Medium Fabrication Mettle Glass Handling Heat Resistance CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_110.jpeg",
+            "Art_SI_110_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 111",
+          "name": "Art SI 111",
+          "slug": "art-si-111-art-si-111",
+          "description": "Heavy Weight Green Hotmail Gloves Band Top & Gauntlet Cuff Quality: 16-oz to 34-oz Applications: Light Medium Fabrication Mettle Glass Handling Heat Resistance CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_111.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 112",
+          "name": "Art SI 112",
+          "slug": "art-si-112-art-si-112",
+          "description": "Hotmail Gloves with Knitted Wrist Quality: 16-oz to 24-oz Applications: Light Medium Fabrication Mettle Glass Handling Heat Resistance CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_112.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 113",
+          "name": "Art SI 113",
+          "slug": "art-si-113-art-si-113",
+          "description": "Hotmail Gloves Band Top Cuff Quality: 16-oz to 24-oz Applications: Light Medium Fabrication Mettle Glass Handling Heat Resistance CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_113.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 114",
+          "name": "Art SI 114",
+          "slug": "art-si-114-art-si-114",
+          "description": "Fiat Gloves Double Palm with canvas & Drill Cuff Quality: 16-oz to 24-oz Applications: Light Medium Fabrication Mettle Glass Handling Heat Resistance CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_114.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 115",
+          "name": "Art SI 115",
+          "slug": "art-si-115-art-si-115",
+          "description": "Canvas Mitten Gloves Double Palm Quality: 16-oz to 32-oz Applications: Light Medium Fabrication Mettle Glass Handling Heat Resistance CE Minimal Risk",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Interlock Gloves",
+      "categorySlug": "interlock-gloves",
+      "imagesZip": "Interlock_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 645",
+          "name": "Art SI 645",
+          "slug": "art-si-645-art-si-645",
+          "description": "Interlock white Fourchette Gloves Size: 6 to 14/ Different Weight Cotton & Poly Cotton Applications: Hygiene Rules Valeting Inspection Food Industries, Electronics, Packing CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_645.jpeg",
+            "Art_SI_645_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 646",
+          "name": "Art SI 646",
+          "slug": "art-si-646-art-si-646",
+          "description": "Interlock White Fourchette Double Palm Gloves Size: 6 to 14/ Different Weight Colton & Poly Cotton Applications: Hygiene Rules Valeting Inspection Food Industries, Electronics, Packing CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_646.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 647",
+          "name": "Art SI 647",
+          "slug": "art-si-647-art-si-647",
+          "description": "Interlock White Reversible Gloves Size: Gents & Ladies/ Different Weight Cotton & Poly Cotton Applications: light General-Purpose Gloves Liner, Food Industries CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_647.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 648",
+          "name": "Art SI 648",
+          "slug": "art-si-648-art-si-648",
+          "description": "Interlock White Fourchette With PVC Mini Dots Gloves Size: 6 to 14/ Different Weight Cotton & Poly Cotton Applications: Hygiene Rules Product Inspection Small Scale Assembling, Electronics CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_648.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 649",
+          "name": "Art SI 649",
+          "slug": "art-si-649-art-si-649",
+          "description": "Interlock Black Fourchette With PVC Mini Dots Gloves Size: 6 to 14/ Different Weight Cotton & Poly Cotton Applications: Hygiene Rules Product Inspection Small Scale Assembling, Electronics CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_649.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 650",
+          "name": "Art SI 650",
+          "slug": "art-si-650-art-si-650",
+          "description": "Interlock Gloves With Knitted Wrist Size: Gents & Ladies/ Different Weight Cotton & Poly Cotton Applications: Hygienic Rule Gloves Liner CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_650.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 651",
+          "name": "Art SI 651",
+          "slug": "art-si-651-art-si-651",
+          "description": "Interlock Gloves Reversible Open Cuff Size: Gents & Ladies/ Different Weight Cotton & Poly Cotton Applications: Hygienic Rule Gloves Liner CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_651.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 652",
+          "name": "Art SI 652",
+          "slug": "art-si-652-art-si-652",
+          "description": "Light Weight Lisle Gloves Size: Gents & Ladies Cotton & Poly Cotton CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_652.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 653",
+          "name": "Art SI 653",
+          "slug": "art-si-653-art-si-653",
+          "description": "Light Medium Heavy Lisle Gloves Size: Gents & Ladies 14” Cotton & Poly Cotton CE Minimal Risk",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Jersey Gloves",
+      "categorySlug": "jersey-gloves",
+      "imagesZip": "Jersey_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 534",
+          "name": "Art SI 534",
+          "slug": "art-si-534-art-si-534",
+          "description": "Jersey Gloves Fourchette Style Size: Gents & Ladies/ Different Weight Applications: light/ Medium Fabrication Metal Handling Glass Handling CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_534.jpeg",
+            "Art_SI_534_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 535",
+          "name": "Art SI 535",
+          "slug": "art-si-535-art-si-535",
+          "description": "Jersey Gloves Fourchette Style Double Palm Size: Gents & Ladies/ Different Weight Applications: Light/ Medium Fabrication Metal Handling Glass Handling CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_535.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 536",
+          "name": "Art SI 536",
+          "slug": "art-si-536-art-si-536",
+          "description": "Jersey Grey Gloves with Knitted wrist Straight Wing Thumb Size: Gents & Ladies/ Different Weight Applications: Light/ Medium Fabrication Metal Handling Glass Handling CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_536.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 537",
+          "name": "Art SI 537",
+          "slug": "art-si-537-art-si-537",
+          "description": "Jersey Gloves with Knitted Wrist Reversible Style Size: Gents & Ladies/ Different Weight Applications: light/ Medium Fabrication Metal Handling Glass Handling CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_537.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 538",
+          "name": "Art SI 538",
+          "slug": "art-si-538-art-si-538",
+          "description": "Jersey Brown Gloves Size: Gents & Ladies/ Different Weight Cotton & Poly Cotton Applications: General Purpose/ Gardening Light/ Medium Fabrication CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_538.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 539",
+          "name": "Art SI 539",
+          "slug": "art-si-539-art-si-539",
+          "description": "Jersey Brown Gloves with PVC Dots Size: Gents & Ladies/ Different Weight Cotton & Poly Cotton Applications: General Purpose Gardening Light/ Medium Fabrication CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_539.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 540",
+          "name": "Art SI 540",
+          "slug": "art-si-540-art-si-540",
+          "description": "Jersey Hunting Gloves Size: Gents & Ladies/ Different Weight Cotton & Poly Cotton CE Minimal Risk",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Latex Gloves",
+      "categorySlug": "latex-gloves",
+      "imagesZip": "Latex_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 459",
+          "name": "Art SI 459",
+          "slug": "art-si-459-art-si-459",
+          "description": "Seamless Latex Red Coated Gloves Light Weight/ Different Colors & Sizes Applications: General Handling, Disposal Operations, Baggage Handling, Construction, Maintenance Gardening CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_459.jpeg",
+            "Art_SI_459_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 460",
+          "name": "Art SI 460",
+          "slug": "art-si-460-art-si-460",
+          "description": "Seamless Latex Blue Coated Gloves Medium & Heavy Weight/ Different Colors & Sizes Applications: General Handling, Disposal Operations, Baggage Handling, Construction, Maintenance Gardening CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_460.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 461",
+          "name": "Art SI 461",
+          "slug": "art-si-461-art-si-461",
+          "description": "Latex Dip Gristle Gloves Interlock Fleece Lining Medium & Heavy Weight/ Different Colors & Sizes Applications: General Handling, Disposal Operations, Baggage Handling, Construction, Maintenance Gardening CAT II EN-388 EN-420",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Nitrile Gloves",
+      "categorySlug": "nitrile-gloves",
+      "imagesZip": "Nitrile_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 362",
+          "name": "Art SI 362",
+          "slug": "art-si-362-art-si-362",
+          "description": "Blue Nitrile Gloves Half Dip with K/W Fleece Lining Size: 8, 9, 10 Applications: General Handling, physical tasks, Disposal Operations, Chemical Handling Line Work CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_362.jpeg",
+            "Art_SI_362_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 363",
+          "name": "Art SI 363",
+          "slug": "art-si-363-art-si-363",
+          "description": "Blue Nitrile Gloves Full Dip with K/W Fleece Lining Size: 8, 9, 10 Applications: General Handling, physical tasks, Disposal Operations, Chemical Handling Line Work CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_363.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 364",
+          "name": "Art SI 364",
+          "slug": "art-si-364-art-si-364",
+          "description": "Yellow Nitrile Gloves Half Dip Light Weight with K/W Interlock Lining Size: 8, 9, 10 Applications: General Handling, physical tasks, Disposal Operations, Chemical Handling Line Work CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_364.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 365",
+          "name": "Art SI 365",
+          "slug": "art-si-365-art-si-365",
+          "description": "Yellow Nitrile Coated Full Dip With K/W Interlock Lining Size: 8, 9, 10 Applications: General Handling, physical tasks, Disposal Operations, Chemical Handling Line Work CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_365.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 366",
+          "name": "Art SI 366",
+          "slug": "art-si-366-art-si-366",
+          "description": "Yellow Nitrile Half Dip K/W with Interlock Lining Standard Quality Size: 8, 9, 10 Applications: General Handling, physical tasks, Disposal Operations, Chemical Handling Line Work CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_366.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 367",
+          "name": "Art SI 367",
+          "slug": "art-si-367-art-si-367",
+          "description": "Nitrile Heavy Weight Blue Full Dip with Safety Cuff Fleece Lining Enhance Chemical Resistance Applications: : General Handling, Physical Tasks Disposal Operations CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_367.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 368",
+          "name": "Art SI 368",
+          "slug": "art-si-368-art-si-368",
+          "description": "Nitrile Heavy Weight Blue Palm Dip with Safety Cuff Fleece Lining Enhance Chemical Resistance Applications: General Handling, Physical Tasks Disposal Operations CAT II EN-388 EN-420",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Nylon Gloves",
+      "categorySlug": "nylon-gloves",
+      "imagesZip": "Nylon_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 241",
+          "name": "Art SI 241",
+          "slug": "art-si-241-art-si-241",
+          "description": "Nylon Simplex Gloves Fourchette Style Size: 6 to 14 70 Denier Nylon Lint Free Applications: Hygiene Rules Quality Inspections Smale Scale, Assembly, Electronics, Paint Lines CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_241.jpeg",
+            "Art_SI_241_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 242",
+          "name": "Art SI 242",
+          "slug": "art-si-242-art-si-242",
+          "description": "Nylon Perlon Gloves Fourchette Style Size: 6 to 14 70 Denier Nylon Lint Free Applications: Hygiene Rules Quality Inspections Smale Scale, Assembly, Electronics, Point Liner CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_242.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 243",
+          "name": "Art SI 243",
+          "slug": "art-si-243-art-si-243",
+          "description": "Stretch Full Fashion Nylon Gloves Fourchette Style Lint Free Size: Gents & Ladies Applications: Hygiene Rules, Quality Inspections Smale Scale, Assembly, Electronics, Paint Lines CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_243.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 244",
+          "name": "Art SI 244",
+          "slug": "art-si-244-art-si-244",
+          "description": "Stretch Nylon Reversible Lint Free Size: Gents & Ladies Applications: Hygiene Rules Quality Inspections Smale Scale, Assembly, Electronics, Paint Lines CE Minimal Risk",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "PVC Dipped Gloves",
+      "categorySlug": "pvc-dipped-gloves",
+      "imagesZip": "PVC_Dipped_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 3062",
+          "name": "Art SI 3062",
+          "slug": "art-si-3062-art-si-3062",
+          "description": "Blue Nitrile Gloves Half Dip With K/W Fleece Lining Size: 8, 9, 10 Applications: General Handling, physical tasks, Disposal Operations, Chemical Handling Line Work CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_3062.jpeg",
+            "Art_SI_3062_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 3063",
+          "name": "Art SI 3063",
+          "slug": "art-si-3063-art-si-3063",
+          "description": "Blue Nitrile Gloves Full Dip With K/W Fleece Lining Size: 8, 9, 10 Applications: General Handling, physical tasks, Disposal Operations, Chemical Handling Line Work CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_3063.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 3064",
+          "name": "Art SI 3064",
+          "slug": "art-si-3064-art-si-3064",
+          "description": "Yellow Nitrile Gloves Half Dip Light Weight with K/W Interlock Lining Size: 8, 9, 10 Applications: General Handling, physical tasks, Disposal Operations, Chemical Handling Line Work CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_3064.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 3065",
+          "name": "Art SI 3065",
+          "slug": "art-si-3065-art-si-3065",
+          "description": "Yellow Nitrile Coated Full Dip With K/W Interlock Lining Size: 8, 9, 10 Applications: General Handling, physical tasks, Disposal Operations, Chemical Handling Line Work CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_3065.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 3066",
+          "name": "Art SI 3066",
+          "slug": "art-si-3066-art-si-3066",
+          "description": "Yellow Nitrile Half Dip K/W with Interlock Lining Standard Quality Size: 8, 9, 10 Applications: General Handling, physical tasks, Disposal Operations, Chemical Handling Line Work CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_3066.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 3067",
+          "name": "Art SI 3067",
+          "slug": "art-si-3067-art-si-3067",
+          "description": "Nitrile Heavy Weight Blue Full Dip with Safety Cuff Fleece Lining Enhance Chemical Resistance Applications: : General Handling, Physical Tasks Disposal Operations CAT II EN-388 EN-420",
+          "imageFiles": [
+            "Art_SI_3067.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 3068",
+          "name": "Art SI 3068",
+          "slug": "art-si-3068-art-si-3068",
+          "description": "Nitrile Heavy Weight Blue Palm Dip with Safety Cuff Fleece Lining Enhance Chemical Resistance Applications: General Handling, Physical Tasks Disposal Operations CAT II EN-388 EN-420",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Seamless Gloves",
+      "categorySlug": "seamless-gloves",
+      "imagesZip": "Seamless_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 2028",
+          "name": "Art SI 2028",
+          "slug": "art-si-2028-art-si-2028",
+          "description": "Seamless Knitted Gloves 7 Gauge Cotton & Poly Cotton Size: Gents & Ladies/ Different Weight Applications: General Handling/ Food Processing Gloves Liner CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_2028.jpeg",
+            "Art_SI_2028_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 2029",
+          "name": "Art SI 2029",
+          "slug": "art-si-2029-art-si-2029",
+          "description": "Seamless Knitted Gloves 10 Gauge 10 Gauge Cotton & Poly Cotton Size: Gents & Ladies/ Different Weight Applications: General Handling/ Food Processing Gloves Liner CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_2029.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 2030",
+          "name": "Art SI 2030",
+          "slug": "art-si-2030-art-si-2030",
+          "description": "Seamless Knitted Gloves 7 & 10 Gauge Cotton & Poly Cotton Size: Gents & Ladies/ Mix Colors & Fibers Applications: General Handling/ Food Processing Gloves Liner CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_2030.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 2031",
+          "name": "Art SI 2031",
+          "slug": "art-si-2031-art-si-2031",
+          "description": "Seamless Knitted Gloves White 7 & 10 Gauge Cotton & Poly Cotton Size: Gents & Ladies/ Different Weight Applications: General Handling/ Food Processing Gloves Liner CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_2031.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 2032",
+          "name": "Art SI 2032",
+          "slug": "art-si-2032-art-si-2032",
+          "description": "Seamless Knitted With PVC Dots oSize: Gents & Ladies/ Different WeightApplications: General Handling/ Food Processing Gloves Liner CE Minimal RiskoSize: Gents & Ladies/ Different WeightApplications: General Handling/ Food Processing Gloves Liner CE Minimal Risk7 & 10 Gauge   o Size: Gents & Ladies/ Different Weight Applications: General Handling/ Food Processing Gloves Liner CE Minimal Risk   o Size: Gents & Ladies/ Different Weight Applications: General Handling/ Food Processing Gloves Liner CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_2032.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 2033",
+          "name": "Art SI 2033",
+          "slug": "art-si-2033-art-si-2033",
+          "description": "Blue Seamless Knitted with PVC Dots 7 & 10 Gauge Size: Gents & Ladies/ Different Weight Applications: General Handling/ Food Processing Gloves Liner CE Minimal Risk",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Terry Gloves",
+      "categorySlug": "terry-gloves",
+      "imagesZip": "Terry_Gloves.zip",
+      "products": [
+        {
+          "sku": "Art SI 4024",
+          "name": "Art SI 4024",
+          "slug": "art-si-4024-art-si-4024",
+          "description": "Terry Cotton Gloves With K/W Quality: 18-oz to 34-oz Heat Resistant Dry / Washable Application: Utensil Handling/ Kitchens/ Light/ Medium Fabrication/ Metal/ Glass Handling. CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_4024.jpeg",
+            "Art_SI_4024_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 4025",
+          "name": "Art SI 4025",
+          "slug": "art-si-4025-art-si-4025",
+          "description": "Terry Cotton Gloves Gauntlets Size: 25 cm to 40 cm Length Quality: 18-oz to 34-oz Heat Resistant Dry / Washable Application: Utensil Handling/ Kitchens/ Light/ Medium Fabrication/ Metal/ Glass Handling. CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_4025.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 4026",
+          "name": "Art SI 4026",
+          "slug": "art-si-4026-art-si-4026",
+          "description": "Terry Cotton Gloves With Canvas Cuff Quality: 18-oz to 34-oz Heat Resistant Dry / Washable Application: Utensil Handling/ Kitchens/ Light/ Medium Fabrication/ Metal/ Glass Handling. CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_4026.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 4027",
+          "name": "Art SI 4027",
+          "slug": "art-si-4027-art-si-4027",
+          "description": "Terry Mate Different Size & Weight",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Over Sleeves",
+      "categorySlug": "over-sleeves",
+      "imagesZip": "Over_Sleeves.zip",
+      "products": [
+        {
+          "sku": "Art SI 154",
+          "name": "Art SI 154",
+          "slug": "art-si-154-art-si-154",
+          "description": "Terry Cotton Over Sleeves Different Weight Applications: General Purpose Food Preparation Kitchen CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_154.jpeg",
+            "Art_SI_154_2.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 155",
+          "name": "Art SI 155",
+          "slug": "art-si-155-art-si-155",
+          "description": "Cotton Drill Over Sleeves Different Weight Applications: General Purpose Food Preparation Kitchen CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_155.jpeg"
+          ]
+        },
+        {
+          "sku": "Art SI 156",
+          "name": "Art SI 156",
+          "slug": "art-si-156-art-si-156",
+          "description": "Drill Over Sleeves Dyed Flame Retardant Different Weight & Sizes Applications: General Purpose Food Preparation Kitchen, Workshop CE Minimal Risk",
+          "imageFiles": []
+        }
+      ]
+    },
+    {
+      "categoryName": "Aprons",
+      "categorySlug": "aprons",
+      "imagesZip": "Aprons.zip",
+      "products": [
+        {
+          "sku": "Art SI 158",
+          "name": "Art SI 158",
+          "slug": "art-si-158-art-si-158",
+          "description": "Industrial Aprons Different Size/ Different Fabric/ Flame Retardant CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_158.jpeg"
+          ]
+        }
+      ]
+    },
+    {
+      "categoryName": "Towels",
+      "categorySlug": "towels",
+      "imagesZip": "Towels.zip",
+      "products": [
+        {
+          "sku": "Art SI 157",
+          "name": "Art SI 157",
+          "slug": "art-si-157-art-si-157",
+          "description": "Terry Towels Different Weight & Sizes CE Minimal Risk",
+          "imageFiles": [
+            "Art_SI_157.jpeg"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,71 +1,125 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Search, Sparkles } from "lucide-react";
-import products from "@/data/products.json";
+import {
+  catalogueCategories,
+  catalogueProducts,
+  type CatalogueInventoryProduct,
+} from "@/data/catalogue";
 
-const filterTabs = [
-  { label: "All", value: "all" },
-  { label: "Industrial Textiles", value: "textiles" },
-  { label: "Engine Machineries", value: "machineries" },
-];
+type FilterOption = {
+  value: string;
+  label: string;
+};
+
+const fallbackCategoryLabel = "All Categories";
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchTerm, setSearchTerm] = useState("");
-  const [nicheFilter, setNicheFilter] = useState<string>("all");
+  const [categoryFilter, setCategoryFilter] = useState<string>("all");
+
+  const filterOptions = useMemo<FilterOption[]>(
+    () => [
+      { value: "all", label: fallbackCategoryLabel },
+      ...catalogueCategories.map((category) => ({
+        value: category.slug,
+        label: category.name,
+      })),
+    ],
+    [],
+  );
+
+  const countsMap = useMemo<Record<string, number>>(() => {
+    const map: Record<string, number> = { all: catalogueProducts.length };
+    catalogueCategories.forEach((category) => {
+      map[category.slug] = category.products.length;
+    });
+    return map;
+  }, []);
 
   useEffect(() => {
-    const nicheParam = searchParams.get("niche");
-    if (nicheParam && filterTabs.some((tab) => tab.value === nicheParam)) {
-      setNicheFilter(nicheParam);
+    const categoryParam = searchParams.get("category");
+    if (categoryParam) {
+      const validCategory =
+        categoryParam === "all" || filterOptions.some((option) => option.value === categoryParam);
+      if (validCategory) {
+        setCategoryFilter(categoryParam);
+      }
     }
 
     const queryParam = searchParams.get("q");
     if (queryParam !== null) {
       setSearchTerm(queryParam);
     }
-  }, [searchParams]);
+  }, [searchParams, filterOptions]);
 
-  const updateQueryParams = (nextSearch: string, nextNiche: string) => {
+  const updateQueryParams = (nextSearch: string, nextCategory: string) => {
     const nextParams = new URLSearchParams();
 
     if (nextSearch.trim().length > 0) {
       nextParams.set("q", nextSearch.trim());
     }
 
-    if (nextNiche !== "all") {
-      nextParams.set("niche", nextNiche);
+    if (nextCategory !== "all") {
+      nextParams.set("category", nextCategory);
     }
 
     setSearchParams(nextParams, { replace: true });
   };
 
-  const filteredProducts = useMemo(() => {
-    const lowerSearch = searchTerm.toLowerCase();
-    return products.filter((product) => {
-      const matchesSearch =
-        product.name.toLowerCase().includes(lowerSearch) ||
-        product.shortDescription.toLowerCase().includes(lowerSearch) ||
-        product.category.toLowerCase().includes(lowerSearch);
-      const matchesNiche = nicheFilter === "all" || product.niche === nicheFilter;
-      return matchesSearch && matchesNiche;
-    });
-  }, [searchTerm, nicheFilter]);
+  const normalizedSearch = searchTerm.trim().toLowerCase();
 
-  const totalCounts = useMemo(() => {
-    return filterTabs.reduce<Record<string, number>>((acc, tab) => {
-      acc[tab.value] =
-        tab.value === "all"
-          ? products.length
-          : products.filter((product) => product.niche === tab.value).length;
-      return acc;
-    }, {});
-  }, []);
+  const matchesSearch = useCallback(
+    (product: CatalogueInventoryProduct) => {
+      if (!normalizedSearch) return true;
+      const haystacks = [
+        product.name,
+        product.summary,
+        product.description,
+        product.sku,
+        product.categoryName,
+      ]
+        .filter(Boolean)
+        .map((value) => value.toLowerCase());
+
+      return haystacks.some((value) => value.includes(normalizedSearch));
+    },
+    [normalizedSearch],
+  );
+
+  const filteredProducts = useMemo(() => {
+    return catalogueProducts.filter((product) => {
+      const matchesCategory = categoryFilter === "all" || product.categorySlug === categoryFilter;
+      return matchesCategory && matchesSearch(product);
+    });
+  }, [categoryFilter, matchesSearch]);
+
+  const groupedCategories = useMemo(() => {
+    return catalogueCategories
+      .filter((category) => categoryFilter === "all" || category.slug === categoryFilter)
+      .map((category) => ({
+        name: category.name,
+        slug: category.slug,
+        products: filteredProducts.filter((product) => product.categorySlug === category.slug),
+      }))
+      .filter((group) => group.products.length > 0);
+  }, [categoryFilter, filteredProducts]);
+
+  const totalMatches = filteredProducts.length;
+  const totalInScope = countsMap[categoryFilter] ?? countsMap.all;
+  const hasResults = groupedCategories.length > 0;
 
   return (
     <div className="min-h-screen">
@@ -89,13 +143,13 @@ const Products = () => {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-4xl text-center"
           >
-            <Badge className="mb-4 mx-auto bg-primary/12 text-primary border-primary/20">Product Portfolio</Badge>
+            <Badge className="mb-4 mx-auto bg-primary/12 text-primary border-primary/20">Protective Gloves Catalogue</Badge>
             <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl lg:text-6xl">
-              Industrial Protection &amp; Engine Machinery
+              Industrial Hand Protection Portfolio
             </h1>
             <p className="mx-auto mt-4 text-lg text-muted-foreground md:text-xl">
-              Discover textiles engineered for safety and machinery built for precision—all curated for heavy industry
-              performance and compliance.
+              Explore the complete SWAMZ glove range—organised by application and engineered for compliance, comfort, and
+              durability.
             </p>
           </motion.div>
 
@@ -103,84 +157,173 @@ const Products = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.1 }}
-            className="mx-auto mt-10 max-w-4xl rounded-3xl border border-white/60 bg-white/80 backdrop-blur-2xl shadow-[0_25px_80px_-35px_rgba(146,64,14,0.55)]"
+            className="mx-auto mt-10 max-w-4xl rounded-3xl border border-primary/10 bg-white/90 backdrop-blur-2xl shadow-[0_25px_65px_-40px_rgba(146,64,14,0.55)]"
           >
-            <div className="grid gap-4 p-6 md:grid-cols-[1.3fr_0.7fr] md:p-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+            <div className="flex flex-col gap-4 p-6 md:flex-row md:items-center md:gap-6 md:p-8">
+              <div className="relative flex-1">
+                <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
                 <Input
-                  placeholder="Search products, categories, or capabilities..."
+                  placeholder="Search by SKU, application, or material..."
                   value={searchTerm}
                   onChange={(event) => {
                     const value = event.target.value;
                     setSearchTerm(value);
-                    updateQueryParams(value, nicheFilter);
+                    updateQueryParams(value, categoryFilter);
                   }}
-                  className="h-12 rounded-xl border-primary/20 bg-white/90 pl-12 text-black"
+                  className="h-12 rounded-xl border-primary/20 bg-white/95 pl-12 text-black shadow-sm"
                 />
               </div>
 
-              <div className="flex flex-wrap justify-center gap-2 md:justify-end">
-                {filterTabs.map((tab) => {
-                  const isActive = nicheFilter === tab.value;
-                  return (
-                    <Button
-                      key={tab.value}
-                      variant="outline"
-                      className={`rounded-xl border-primary/30 bg-white text-black transition-all hover:bg-primary/10 hover:text-black ${
-                        isActive ? "shadow-[0_18px_45px_-28px_rgba(146,64,14,0.55)]" : "shadow-none"
-                      }`}
-                      onClick={() => {
-                        setNicheFilter(tab.value);
-                        updateQueryParams(searchTerm, tab.value);
-                      }}
-                      aria-pressed={isActive}
-                    >
-                      {tab.label}
-                      <Badge className="ml-2 bg-primary/10 text-primary" variant="secondary">
-                        {totalCounts[tab.value]}
-                      </Badge>
-                    </Button>
-                  );
-                })}
+              <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center md:w-auto">
+                <Select
+                  value={categoryFilter}
+                  onValueChange={(value) => {
+                    setCategoryFilter(value);
+                    updateQueryParams(searchTerm, value);
+                  }}
+                >
+                  <SelectTrigger className="h-12 min-w-[220px] rounded-xl border-primary/20 bg-white/95 text-left text-black shadow-sm">
+                    <SelectValue placeholder="Filter by category" />
+                  </SelectTrigger>
+                  <SelectContent align="end" className="min-w-[240px]">
+                    {filterOptions.map((option) => (
+                      <SelectItem key={option.value} value={option.value}>
+                        <span className="flex items-center justify-between gap-4">
+                          <span>{option.label}</span>
+                          <span className="text-xs font-medium text-muted-foreground">
+                            {countsMap[option.value] ?? 0}
+                          </span>
+                        </span>
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+
+                <Button
+                  variant="ghost"
+                  className="h-12 rounded-xl border border-transparent text-muted-foreground transition-colors hover:border-primary/20 hover:bg-primary/5 hover:text-primary"
+                  onClick={() => {
+                    setSearchTerm("");
+                    setCategoryFilter("all");
+                    updateQueryParams("", "all");
+                  }}
+                >
+                  Reset filters
+                </Button>
               </div>
             </div>
 
-            <div className="border-t border-primary/15 bg-white/70 px-6 py-4 text-sm text-muted-foreground/90 md:px-8">
-              <div className="flex items-center justify-center gap-2">
-                <Sparkles className="h-4 w-4 text-primary" />
-                Showing {filteredProducts.length} of {products.length} catalog items
+            <div className="border-t border-primary/10 bg-white/80 px-6 py-4 text-sm text-muted-foreground md:px-8">
+              <div className="flex flex-col gap-2 text-center sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center justify-center gap-2">
+                  <Sparkles className="h-4 w-4 text-primary" />
+                  Showing {totalMatches} of {totalInScope} catalogue products
+                </div>
+                <span className="text-xs uppercase tracking-[0.18em] text-muted-foreground/80">
+                  {categoryFilter === "all" ? fallbackCategoryLabel : filterOptions.find((option) => option.value === categoryFilter)?.label}
+                </span>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Product Grid */}
+      {/* Catalogue Listing */}
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_center,_rgba(217,119,6,0.08),transparent_60%),_linear-gradient(180deg,rgba(255,252,243,1)_0%,rgba(250,242,229,1)_100%)] py-24">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(217,119,6,0.12)_0%,rgba(250,204,21,0.1)_100%)] opacity-55" />
         </div>
         <div className="container relative z-10 mx-auto px-4">
-          {filteredProducts.length > 0 ? (
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-            >
-              {filteredProducts.map((product) => (
+          {hasResults ? (
+            <div className="space-y-16">
+              {groupedCategories.map((group, index) => (
                 <motion.div
-                  key={product.id}
-                  initial={{ opacity: 0, y: 24 }}
+                  key={group.slug}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.45 }}
+                  transition={{ duration: 0.45, delay: index * 0.05 }}
+                  className="space-y-6"
                 >
-                  <ProductCard product={product} />
+                  <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
+                    <h2 className="font-heading text-2xl font-semibold text-foreground md:text-3xl">{group.name}</h2>
+                    <Badge className="w-fit bg-primary/10 text-primary" variant="secondary">
+                      {group.products.length} styles
+                    </Badge>
+                  </div>
+                  <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                    {group.products.map((product) => {
+                      const contactHref = `/contact?product=${encodeURIComponent(product.sku)}`;
+                      const primaryImage = product.imageUrls[0];
+                      return (
+                        <article
+                          key={product.sku}
+                          className="group flex h-full flex-col rounded-3xl border border-primary/15 bg-white/95 p-6 shadow-[0_18px_45px_-32px_rgba(146,64,14,0.45)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_-34px_rgba(146,64,14,0.55)]"
+                        >
+                          <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-primary/10 bg-white p-3">
+                            {primaryImage ? (
+                              <img
+                                src={primaryImage}
+                                alt={product.name}
+                                loading="lazy"
+                                className="max-h-full max-w-full object-contain"
+                                onError={(event) => {
+                                  event.currentTarget.style.visibility = "hidden";
+                                }}
+                              />
+                            ) : (
+                              <div className="flex h-full w-full items-center justify-center text-xs uppercase tracking-wide text-muted-foreground">
+                                Image coming soon
+                              </div>
+                            )}
+                            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-black/0 to-black/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                          </div>
+
+                          <div className="mt-5 flex flex-1 flex-col gap-4">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <h3 className="font-heading text-xl font-semibold text-foreground">
+                                {product.name}
+                              </h3>
+                              <Badge variant="outline" className="border-primary/30 bg-white/80 text-primary">
+                                {product.sku.replace(/^Art\s+/i, "")}
+                              </Badge>
+                            </div>
+                            <p className="text-sm leading-relaxed text-muted-foreground">{product.summary}</p>
+                            {product.highlights.length > 0 && (
+                              <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+                                {product.highlights.map((highlight) => (
+                                  <li key={highlight} className="flex gap-2">
+                                    <span
+                                      aria-hidden
+                                      className="mt-1 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"
+                                    />
+                                    <span>{highlight}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+
+                          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                            <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground/80">
+                              {product.categoryName}
+                            </span>
+                            <Link to={contactHref} className="w-full sm:w-auto">
+                              <Button
+                                variant="outline"
+                                className="w-full border-primary/40 text-primary transition-colors hover:bg-primary/10 hover:text-primary"
+                              >
+                                Request Quote
+                              </Button>
+                            </Link>
+                          </div>
+                        </article>
+                      );
+                    })}
+                  </div>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
           ) : (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -189,14 +332,14 @@ const Products = () => {
             >
               <h2 className="font-heading text-2xl font-semibold text-foreground">No products found</h2>
               <p className="mt-3 text-muted-foreground">
-                Try adjusting your search terms or filter to explore more of our catalog.
+                Try adjusting your search terms or category filter to explore more of our glove catalogue.
               </p>
               <Button
                 className="mt-6 border-primary/30 bg-white text-black hover:bg-primary/10 hover:text-black"
                 variant="outline"
                 onClick={() => {
                   setSearchTerm("");
-                  setNicheFilter("all");
+                  setCategoryFilter("all");
                   updateQueryParams("", "all");
                 }}
               >
@@ -224,23 +367,14 @@ const Products = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center"
+            className="mx-auto max-w-3xl text-center"
           >
-            <h2 className="font-heading text-3xl font-bold md:text-4xl">Need a Curated Solution?</h2>
+            <h2 className="font-heading text-3xl font-bold md:text-4xl">Need tailored glove recommendations?</h2>
             <p className="mt-4 text-lg text-white/85">
-              Our engineers can assemble a bespoke package of textiles and machinery tailored to your throughput and
-              compliance goals.
+              Share your safety requirements and our specialists will curate the right protection set—complete with sizing,
+              certifications, and lead times.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-              <Link to="/downloads">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white/80 bg-white text-black hover:bg-white/90"
-                >
-                  Download Catalog
-                </Button>
-              </Link>
               <Link to="/contact">
                 <Button
                   variant="outline"

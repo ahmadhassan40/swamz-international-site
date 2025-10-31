@@ -1,7 +1,14 @@
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import {
   Shield,
   HandMetal,
@@ -13,52 +20,59 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { catalogueCategories } from "@/data/catalogue";
+
+import type { LucideIcon } from "lucide-react";
+
+const categoryIconMap: Record<string, LucideIcon> = {
+  "drill-gloves": Scissors,
+  "drill-dotted-gloves": HandMetal,
+  "chore-gloves": Shield,
+  "cord-gloves": Scissors,
+  "hotmail-gloves": Flame,
+  "interlock-gloves": Shield,
+  "jersey-gloves": HandMetal,
+  "latex-gloves": Droplets,
+  "nitrile-gloves": Droplets,
+  "nylon-gloves": Snowflake,
+  "pvc-dipped-gloves": Shield,
+  "seamless-gloves": HandMetal,
+  "terry-gloves": Flame,
+  "over-sleeves": Shield,
+  aprons: Shield,
+  towels: Snowflake,
+};
+
+type CategoryShowcaseItem = {
+  slug: string;
+  name: string;
+  icon: LucideIcon;
+  link: string;
+  summary: string;
+  highlights: string[];
+  image: string | null;
+  count: number;
+};
 
 const Textiles = () => {
-  const categories = [
-    {
-      icon: Scissors,
-      name: "Cut-Resistant",
-      description: "ANSI A1-A9 rated gloves with HPPE and Kevlar fibers for sharp object handling.",
-      standards: ["ANSI/ISEA 105", "EN388 Level A-F"],
-      link: "/products?category=Cut-Resistant",
-    },
-    {
-      icon: Droplets,
-      name: "Nitrile Coated",
-      description: "Chemical and oil-resistant nitrile gloves for wet and oily applications.",
-      standards: ["EN374", "AQL 1.5"],
-      link: "/products?category=Nitrile",
-    },
-    {
-      icon: HandMetal,
-      name: "Leather Work Gloves",
-      description: "Premium grain leather for heavy-duty construction, welding, and industrial work.",
-      standards: ["EN420", "EN388"],
-      link: "/products?category=Leather",
-    },
-    {
-      icon: Flame,
-      name: "Heat-Resistant",
-      description: "Extreme temperature protection up to 1000°C for foundries and welding applications.",
-      standards: ["EN407", "NFPA 1971"],
-      link: "/products?category=Heat-Resistant",
-    },
-    {
-      icon: Shield,
-      name: "Disposable Nitrile",
-      description: "Medical-grade powder-free gloves for cleanroom, lab, and healthcare environments.",
-      standards: ["FDA 510(k)", "EN455", "ASTM D6319"],
-      link: "/products?category=Disposable",
-    },
-    {
-      icon: Snowflake,
-      name: "Specialty Protection",
-      description: "Electrical insulating, cryogenic, and application-specific safety gloves.",
-      standards: ["ASTM D120", "EN511", "IEC 60903"],
-      link: "/products?category=Specialty",
-    },
-  ];
+  const categoryShowcase = useMemo<CategoryShowcaseItem[]>(() => {
+    return catalogueCategories.map((category) => {
+      const primaryProduct = category.products[0];
+      const highlights = (primaryProduct?.highlights ?? []).filter(Boolean).slice(0, 2);
+      return {
+        slug: category.slug,
+        name: category.name,
+        icon: categoryIconMap[category.slug] ?? Shield,
+        link: `/products?category=${category.slug}`,
+        summary:
+          primaryProduct?.summary ??
+          "Explore our certified protective textiles engineered for demanding industrial environments.",
+        highlights,
+        image: primaryProduct?.imageUrls[0] ?? null,
+        count: category.products.length,
+      };
+    });
+  }, []);
 
   const safetyStandards = [
     {
@@ -111,7 +125,7 @@ const Textiles = () => {
               From cut resistance to chemical protection, we have the right solution for your workforce.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/products?niche=textiles">
+              <Link to="/products">
                 <Button
                   variant="hero"
                   size="lg"
@@ -157,41 +171,75 @@ const Textiles = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {categories.map((category, idx) => (
-              <motion.div
-                key={category.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-              >
-                <Link to={category.link}>
-                  <Card className="relative h-full overflow-hidden border border-primary/15 bg-white/90 backdrop-blur-xl shadow-[0_28px_65px_-40px_rgba(146,64,14,0.55)] transition-all duration-[450ms] group hover:-translate-y-2">
-                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,119,6,0.15),transparent_65%)] opacity-0 group-hover:opacity-80 transition-opacity duration-300" />
-                    <CardContent className="relative z-10 p-6">
-                      <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors">
-                        <category.icon className="h-7 w-7 text-primary" />
+            {categoryShowcase.map((category, idx) => {
+              const Icon = category.icon;
+              return (
+                <motion.div
+                  key={category.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                >
+                  <Link to={category.link}>
+                  <Card className="group relative h-full overflow-hidden border border-primary/15 bg-white/95 backdrop-blur-xl shadow-[0_28px_65px_-40px_rgba(146,64,14,0.55)] transition-all duration-300 hover:-translate-y-2 hover:border-primary/25">
+                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,119,6,0.15),transparent_65%)] opacity-0 transition-opacity duration-300 group-hover:opacity-90" />
+                    <CardContent className="relative z-10 flex h-full flex-col gap-5 p-6">
+                      <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-primary/10 bg-white p-4">
+                        {category.image ? (
+                          <img
+                            src={category.image}
+                            alt={`${category.name} sample`}
+                            loading="lazy"
+                            className="max-h-full max-w-full object-contain"
+                            onError={(event) => {
+                              event.currentTarget.style.visibility = "hidden";
+                            }}
+                          />
+                        ) : (
+                          <div className="flex h-full w-full items-center justify-center text-xs uppercase tracking-wide text-muted-foreground">
+                            Preview coming soon
+                          </div>
+                        )}
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/12 via-black/0 to-black/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                       </div>
-                      <h3 className="font-heading font-semibold text-xl mb-2 text-foreground group-hover:text-primary transition-colors">
-                        {category.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground/90 mb-4">{category.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {category.standards.map((standard) => (
-                          <Badge
-                            key={standard}
-                            variant="outline"
-                            className="text-xs border-primary/30 text-foreground/80"
-                          >
-                            {standard}
-                          </Badge>
-                        ))}
+
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex items-center gap-3">
+                          <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary/15">
+                            <Icon className="h-6 w-6" />
+                          </span>
+                          <div>
+                            <h3 className="font-heading text-xl font-semibold text-foreground group-hover:text-primary">
+                              {category.name}
+                            </h3>
+                            <span className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground/70">
+                              {category.count} styles
+                            </span>
+                          </div>
+                        </div>
+                        <ArrowRight className="h-5 w-5 flex-shrink-0 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary" />
                       </div>
+
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {category.summary}
+                      </p>
+                      {category.highlights.length > 0 && (
+                        <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground/90">
+                          {category.highlights.map((highlight) => (
+                            <li key={highlight} className="flex gap-2">
+                              <span aria-hidden className="mt-1 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                              <span>{highlight}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </CardContent>
                   </Card>
-                </Link>
-              </motion.div>
-            ))}
+                  </Link>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -312,7 +360,7 @@ const Textiles = () => {
               Browse our complete catalog or request samples for evaluation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/products?niche=textiles">
+              <Link to="/products">
                 <Button
                   variant="outline"
                   size="lg"
