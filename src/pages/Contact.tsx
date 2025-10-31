@@ -1,3 +1,4 @@
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -5,8 +6,71 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useToast } from "@/hooks/use-toast";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [submitting, setSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    country: "",
+    requirements: "",
+  });
+
+  const handleChange = (field: keyof typeof formData) =>
+    (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setFormData((prev) => ({ ...prev, [field]: event.target.value }));
+    };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (submitting) return;
+
+    setSubmitting(true);
+    try {
+      const payload = {
+        name: formData.name.trim(),
+        company: formData.company.trim(),
+        email: formData.email.trim().toLowerCase(),
+        phone: formData.phone.trim(),
+        country: formData.country.trim(),
+        requirements: formData.requirements.trim(),
+        createdAt: serverTimestamp(),
+        source: "contact_page",
+      };
+
+      await addDoc(collection(db, "quotes"), payload);
+
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        country: "",
+        requirements: "",
+      });
+
+      toast({
+        title: "Quote request sent",
+        description: "Thanks! Our team will reach out shortly.",
+      });
+    } catch (error) {
+      console.error("Failed to submit quote request", error);
+      toast({
+        variant: "destructive",
+        title: "Submission failed",
+        description: "Please retry or contact us directly.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -50,19 +114,57 @@ const Contact = () => {
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   Provide a few details and our specialists will contact you with tailored recommendations and pricing.
                 </p>
-                <form className="mt-6 space-y-4">
+                <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
                   <div className="grid gap-4 md:grid-cols-2">
-                    <Input placeholder="Your Name *" required className="rounded-xl border-primary/20 bg-white/90 text-black" />
-                    <Input placeholder="Company Name *" required className="rounded-xl border-primary/20 bg-white/90 text-black" />
+                    <Input
+                      name="name"
+                      placeholder="Your Name *"
+                      required
+                      value={formData.name}
+                      onChange={handleChange("name")}
+                      className="rounded-xl border-primary/20 bg-white/90 text-black"
+                    />
+                    <Input
+                      name="company"
+                      placeholder="Company Name *"
+                      required
+                      value={formData.company}
+                      onChange={handleChange("company")}
+                      className="rounded-xl border-primary/20 bg-white/90 text-black"
+                    />
                   </div>
                   <div className="grid gap-4 md:grid-cols-2">
-                    <Input type="email" placeholder="Email Address *" required className="rounded-xl border-primary/20 bg-white/90 text-black" />
-                    <Input type="tel" placeholder="Phone Number" className="rounded-xl border-primary/20 bg-white/90 text-black" />
+                    <Input
+                      name="email"
+                      type="email"
+                      placeholder="Email Address *"
+                      required
+                      value={formData.email}
+                      onChange={handleChange("email")}
+                      className="rounded-xl border-primary/20 bg-white/90 text-black"
+                    />
+                    <Input
+                      name="phone"
+                      type="tel"
+                      placeholder="Phone Number"
+                      value={formData.phone}
+                      onChange={handleChange("phone")}
+                      className="rounded-xl border-primary/20 bg-white/90 text-black"
+                    />
                   </div>
-                  <Input placeholder="Country" className="rounded-xl border-primary/20 bg-white/90 text-black" />
+                  <Input
+                    name="country"
+                    placeholder="Country"
+                    value={formData.country}
+                    onChange={handleChange("country")}
+                    className="rounded-xl border-primary/20 bg-white/90 text-black"
+                  />
                   <Textarea
                     placeholder="Tell us about your requirements..."
                     rows={6}
+                    name="requirements"
+                    value={formData.requirements}
+                    onChange={handleChange("requirements")}
                     className="rounded-xl border-primary/20 bg-white/90 text-black"
                   />
                   <Button
@@ -70,8 +172,9 @@ const Contact = () => {
                     size="lg"
                     className="w-full border-primary/30 bg-white text-black hover:bg-primary/10 hover:text-black"
                     variant="outline"
+                    disabled={submitting}
                   >
-                    Submit Request
+                    {submitting ? "Submitting..." : "Submit Request"}
                   </Button>
                 </form>
               </CardContent>

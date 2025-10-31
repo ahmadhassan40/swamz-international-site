@@ -12,7 +12,6 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import CaseStudies from "./pages/CaseStudies";
 import About from "./pages/About";
-import Careers from "./pages/Careers";
 import Quality from "./pages/Quality";
 import Blog from "./pages/Blog";
 import Downloads from "./pages/Downloads";
@@ -38,7 +37,6 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/about" element={<About />} />
-            <Route path="/careers" element={<Careers />} />
             <Route path="/quality" element={<Quality />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/downloads" element={<Downloads />} />

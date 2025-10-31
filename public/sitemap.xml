@@ -37,11 +37,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://swamz-international.com/careers</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://swamz-international.com/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
